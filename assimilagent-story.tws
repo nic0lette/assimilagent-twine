@@ -34,16 +34,13 @@ p16
 (dp17
 S'text'
 p18
-V<<audioLoop "typing" "http://hitori.org/~rika/resources/CT-01" 1450>>\u000a<<audioLoop "stageselect" "http://hitori.org/~rika/resources/stageselect" 4270 0.015>>\u000a\u000a<html>\u000a	<img id="titleImage" src="assimilagent.png" />\u000a</html>\u000a\u000a[[Press Start|Story]]\u000a[[StageSelect]]\u000a\u000a<<animateStart "Story">>
+V\u000a<html>\u000a	<img id="titleImage" src="http://explode.cutely.co/twine/assimil/resources/assimilagent.png" />\u000a</html>\u000a\u000a[[Press Start|Story]]\u000a\u000a[[Stage Select|StageSelect]]\u000a\u000a<<silently>>\u000a<<animateStart "Story">>\u000a<<set $playerHealth = 100>>\u000a<<audioLoop "typing" "http://explode.cutely.co/twine/assimil/resources/CT-01" 1450>>\u000a<<audioLoop "stageselect" "http://explode.cutely.co/twine/assimil/resources/stageselect-looped" 324000>>\u000a<<audioLoop "roar" "http://explode.cutely.co/twine/assimil/resources/CT-05" -1>>\u000a<<audioLoop "credits" "http://explode.cutely.co/twine/assimil/resources/credits" -1>>\u000a<<audioLoop "powerup" "http://explode.cutely.co/twine/assimil/resources/powerup" -1>>\u000a<<audioLoop "boss" "http://explode.cutely.co/twine/assimil/resources/boss" 180000>>\u000a<<audioLoop "laugh" "http://explode.cutely.co/twine/assimil/resources/laugh" -1>>\u000a<<endsilently>>
 p19
-sS'tags'
-p20
-(lp21
 sS'created'
-p22
+p20
 ctime
 struct_time
-p23
+p21
 ((I2013
 I4
 I6
@@ -53,36 +50,37 @@ I1
 I5
 I96
 I1
+tp22
+(dp23
 tp24
-(dp25
-tp26
-Rp27
+Rp25
+sS'title'
+p26
+VStart
+p27
 sS'modified'
 p28
-g27
-sS'title'
+g25
+sS'tags'
 p29
-VStart
-p30
+(lp30
 sbsa(dp31
 g12
 I00
 sg13
 (lp32
 F150.0
-aF150.0
+aF290.0
 asg15
 (itiddlywiki
 Tiddler
 p33
 (dp34
 g18
-VYou will be taken to the hideout of scientists.\u000a\u000aYou are surrounded by countless beaker, flicker equipment, and tools. Does not seem to house anyone.\u000a\u000a<<cyclinglink "Call out" "Nothing.">>\u000a\u000a[[Move around|scientist2]]\u000a\u000a<<stopAudioLoop "stageselect">>
+VYou will be taken to the hideout of scientists.\u000a\u000aYou are surrounded by countless beaker, flicker equipment, and tools. Does not seem to house anyone.\u000a\u000a<<cyclinglink "Call out" "Nothing.">>\u000a\u000a[[Move around|scientist2]]\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p35
 sg20
-(lp36
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -92,15 +90,17 @@ I36
 I5
 I96
 I1
-tp37
-(dp38
-tp39
-Rp40
-sg28
-g40
-sg29
+tp36
+(dp37
+tp38
+Rp39
+sg26
 Vscientist1
-p41
+p40
+sg28
+g39
+sg29
+(lp41
 sbsa(dp42
 g12
 I00
@@ -114,12 +114,10 @@ Tiddler
 p44
 (dp45
 g18
-VYou will be taken to the hideout of librarians.\u000a\u000aIt is very quiet. No one to be seen. You are stuck around a lot of [[books|librarian2]] in all directions.\u000a\u000a<<stopAudioLoop "stageselect">>
+VYou will be taken to the hideout of librarians.\u000a\u000aIt is very quiet. No one to be seen. You are stuck around a lot of [[books|librarian2]] in all directions.\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p46
 sg20
-(lp47
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -129,15 +127,17 @@ I43
 I5
 I96
 I1
-tp48
-(dp49
-tp50
-Rp51
-sg28
-g51
-sg29
+tp47
+(dp48
+tp49
+Rp50
+sg26
 Vlibrarian1
-p52
+p51
+sg28
+g50
+sg29
+(lp52
 sbsa(dp53
 g12
 I00
@@ -151,12 +151,10 @@ Tiddler
 p55
 (dp56
 g18
-VYou will be taken to the hideout of witches.\u000a\u000aIt is made entirely of candy! Is this really the world... You really begin to feel as if you were in a fairy tale.\u000a\u000a[[A bad fairy tale, where witches eat children.|witch2]]\u000a\u000a<<stopAudioLoop "stageselect">>
+VYou will be taken to the hideout of witches.\u000a\u000aIt is made entirely of candy! Is this really the world... You really begin to feel as if you were in a fairy tale.\u000a\u000a[[A bad fairy tale, where witches eat children.|witch2]]\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p57
 sg20
-(lp58
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -166,15 +164,17 @@ I1
 I5
 I96
 I1
-tp59
-(dp60
-tp61
-Rp62
-sg28
-g62
-sg29
+tp58
+(dp59
+tp60
+Rp61
+sg26
 Vwitch1
-p63
+p62
+sg28
+g61
+sg29
+(lp63
 sbsa(dp64
 g12
 I00
@@ -188,12 +188,10 @@ Tiddler
 p66
 (dp67
 g18
-V<<if $scientist eq true AND $librarian eq true AND $witch eq true>>Crystal Cave of the Warrior... It is a beautiful place.\u000a\u000aYou have a bright and shining from every angle all the world around you. You feel a sense of immeasurable power of location.\u000a\u000aIndeed, the power of the warrior of crystal will help you to defeat the evil anonymous.\u000a\u000a[[Call to the Crystal Warrior|crystal2]]<<else>>You will be taken to the hideout of Crystal Warrior.\u000a\u000aThe world around you will begin to tremble violently. Crystal Warrior's power of the universe to protect this place.\u000a\u000a[[You can not enter yet.|StageSelect]]<<endif>>\u000a\u000a<<stopAudioLoop "stageselect">>
+V<<if $scientist eq true AND $librarian eq true AND $witch eq true>>Crystal Cave of the Warrior... It is a beautiful place.\u000a\u000aYou have a bright and shining from every angle all the world around you. You feel a sense of immeasurable power of location.\u000a\u000aIndeed, the power of the warrior of crystal will help you to defeat the evil anonymous.\u000a\u000a[[Call to the Crystal Warrior|crystal2]]<<else>>You will be taken to the hideout of Crystal Warrior.\u000a\u000aThe world around you will begin to tremble violently. Crystal Warrior's power of the universe to protect this place.\u000a\u000a[[You can not enter yet.|StageSelect]]<<endif>>\u000a\u000a<<timedinsert 2>><<stopallsound>><<endtimedinsert>>
 p68
 sg20
-(lp69
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -203,22 +201,24 @@ I11
 I5
 I96
 I1
-tp70
-(dp71
-tp72
-Rp73
-sg28
-g73
-sg29
+tp69
+(dp70
+tp71
+Rp72
+sg26
 Vcrystal1
-p74
+p73
+sg28
+g72
+sg29
+(lp74
 sbsa(dp75
 g12
 I00
 sg13
 (lp76
 F150.0
-aF290.0
+aF430.0
 asg15
 (itiddlywiki
 Tiddler
@@ -228,9 +228,7 @@ g18
 VYou knock a beaker from the shelf accidentally.\u000a\u000a[[CRASSSSSH|scientist3]]
 p79
 sg20
-(lp80
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -240,22 +238,24 @@ I37
 I5
 I96
 I1
-tp81
-(dp82
-tp83
-Rp84
-sg28
-g84
-sg29
+tp80
+(dp81
+tp82
+Rp83
+sg26
 Vscientist2
-p85
+p84
+sg28
+g83
+sg29
+(lp85
 sbsa(dp86
 g12
 I00
 sg13
 (lp87
 F150.0
-aF430.0
+aF570.0
 asg15
 (itiddlywiki
 Tiddler
@@ -265,9 +265,7 @@ g18
 VMysteriously, the Scientist appears!!\u000a\u000a"Whoa! What are you doing in my lab?"\u000a\u000a[["Nice place you have here."|cantenter]]\u000a\u000a[["I'm Assimilagent from the Hive Planet. Would you be assimilated?"|scientist4]]\u000a
 p90
 sg20
-(lp91
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -277,34 +275,34 @@ I40
 I5
 I96
 I1
-tp92
-(dp93
-tp94
-Rp95
-sg28
-g95
-sg29
+tp91
+(dp92
+tp93
+Rp94
+sg26
 Vscientist3
-p96
+p95
+sg28
+g94
+sg29
+(lp96
 sbsa(dp97
 g12
 I00
 sg13
 (lp98
 F10.0
-aF570.0
+aF710.0
 asg15
 (itiddlywiki
 Tiddler
 p99
 (dp100
 g18
-V"This place is classified! You can't enter! Bad! Bad!"\u000a\u000a<<timedgoto "Stage Select" 5 >>
+V"This place is classified! You can't enter! Bad! Bad!"\u000a\u000a<<timedgoto "StageSelect" 5 >>
 p101
 sg20
-(lp102
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -314,15 +312,17 @@ I30
 I5
 I96
 I1
-tp103
-(dp104
-tp105
-Rp106
-sg28
-g106
-sg29
+tp102
+(dp103
+tp104
+Rp105
+sg26
 Vcantenter
-p107
+p106
+sg28
+g105
+sg29
+(lp107
 sbsa(dp108
 g12
 I00
@@ -339,9 +339,7 @@ g18
 V"The Hive Planet!! It's my dream to study such a person...!"\u000a\u000aThe scientist sits down.\u000a\u000a"My name is Tempest. And you are...?"\u000a\u000a[["I do not have a name. I am the Assimilagent."|scientist5]]
 p112
 sg20
-(lp113
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -351,15 +349,17 @@ I55
 I5
 I96
 I1
-tp114
-(dp115
-tp116
-Rp117
-sg28
-g117
-sg29
+tp113
+(dp114
+tp115
+Rp116
+sg26
 Vscientist4
-p118
+p117
+sg28
+g116
+sg29
+(lp118
 sbsa(dp119
 g12
 I00
@@ -376,9 +376,7 @@ g18
 V"Fascinating! Please, tell me more about your world..."\u000a\u000a[["Of course, I'll teach you."|scientist6]]\u000a[["Planet is under attack. There is no time."|underattack]]
 p123
 sg20
-(lp124
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -388,15 +386,17 @@ I39
 I5
 I96
 I1
-tp125
-(dp126
-tp127
-Rp128
-sg28
-g128
-sg29
+tp124
+(dp125
+tp126
+Rp127
+sg26
 Vscientist5
-p129
+p128
+sg28
+g127
+sg29
+(lp129
 sbsa(dp130
 g12
 I00
@@ -410,12 +410,10 @@ Tiddler
 p132
 (dp133
 g18
-V"Then, you'd better leave!"\u000a\u000a"Please take care..."\u000a\u000a<<timedgoto "Stage Select" 5 >>
+V"Then, you'd better leave!"\u000a\u000a"Please take care..."\u000a\u000a<<timedgoto "StageSelect" 5 >>
 p134
 sg20
-(lp135
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -425,15 +423,17 @@ I16
 I5
 I96
 I1
-tp136
-(dp137
-tp138
-Rp139
-sg28
-g139
-sg29
+tp135
+(dp136
+tp137
+Rp138
+sg26
 Vunderattack
-p140
+p139
+sg28
+g138
+sg29
+(lp140
 sbsa(dp141
 g12
 I00
@@ -450,9 +450,7 @@ g18
 VYou sit with Tempest for many hours...\u000a\u000aAfter learning about your world, she is curious.\u000a\u000a"This is the location of many scientific potential, to allow it to be destroyed can not be!"\u000a\u000a"I will come with you. [[I'll help you!|scientist7]]"
 p145
 sg20
-(lp146
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -462,15 +460,17 @@ I43
 I5
 I96
 I1
-tp147
-(dp148
-tp149
-Rp150
-sg28
-g150
-sg29
+tp146
+(dp147
+tp148
+Rp149
+sg26
 Vscientist6
-p151
+p150
+sg28
+g149
+sg29
+(lp151
 sbsa(dp152
 g12
 I00
@@ -487,9 +487,7 @@ g18
 VYou extend the assimilation tube from the back of your neck.\u000a\u000a"A-ah... please, [[be gentle!|scientist8]]"
 p156
 sg20
-(lp157
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -499,15 +497,17 @@ I12
 I5
 I96
 I1
-tp158
-(dp159
-tp160
-Rp161
-sg28
-g161
-sg29
+tp157
+(dp158
+tp159
+Rp160
+sg26
 Vscientist7
-p162
+p161
+sg28
+g160
+sg29
+(lp162
 sbsa(dp163
 g12
 I00
@@ -524,9 +524,7 @@ g18
 VYou complete the transmission of data. Tempest's body fall to the ground.\u000a\u000a[[Her soul and power will be added to yours...|scientistend]]
 p167
 sg20
-(lp168
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -536,15 +534,17 @@ I36
 I5
 I96
 I1
-tp169
-(dp170
-tp171
-Rp172
-sg28
-g172
-sg29
+tp168
+(dp169
+tp170
+Rp171
+sg26
 Vscientist8
-p173
+p172
+sg28
+g171
+sg29
+(lp173
 sbsa(dp174
 g12
 I00
@@ -558,12 +558,10 @@ Tiddler
 p176
 (dp177
 g18
-VSTAGE COMPLETION SCREEN GOES HERE\u000a\u000a<<set $scientist = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
+V<<set $powerUp = "BRUISER FIST">><<display PowerUp>>\u000a\u000a<<set $scientist = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
 p178
 sg20
-(lp179
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -573,15 +571,17 @@ I22
 I5
 I96
 I1
-tp180
-(dp181
-tp182
-Rp183
-sg28
-g183
-sg29
+tp179
+(dp180
+tp181
+Rp182
+sg26
 Vscientistend
-p184
+p183
+sg28
+g182
+sg29
+(lp184
 sbsa(dp185
 g12
 I00
@@ -598,9 +598,7 @@ g18
 VYou wander close to the books.\u000a\u000aThen, sudden movement...!\u000a\u000a[[Scream|scream]]\u000a\u000a[[Stand your ground|librarian3]]
 p189
 sg20
-(lp190
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -610,15 +608,17 @@ I26
 I5
 I96
 I1
-tp191
-(dp192
-tp193
-Rp194
-sg28
-g194
-sg29
+tp190
+(dp191
+tp192
+Rp193
+sg26
 Vlibrarian2
-p195
+p194
+sg28
+g193
+sg29
+(lp195
 sbsa(dp196
 g12
 I00
@@ -635,9 +635,7 @@ g18
 V"Please be quiet in the library OH MY GOD!!"\u000a\u000aFor some reason, you were kicked out...\u000a\u000a<<timedgoto "Start" 5 >>
 p200
 sg20
-(lp201
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -647,15 +645,17 @@ I49
 I5
 I96
 I1
-tp202
-(dp203
-tp204
-Rp205
-sg28
-g205
-sg29
+tp201
+(dp202
+tp203
+Rp204
+sg26
 Vscream
-p206
+p205
+sg28
+g204
+sg29
+(lp206
 sbsa(dp207
 g12
 I00
@@ -669,12 +669,10 @@ Tiddler
 p209
 (dp210
 g18
-VA figure appears above. Did not exist before the moment...\u000a\u000a"Halt! What are you doing here!!"\u000a\u000a[["I'm exploring the library."|impossible]]\u000a[["I'm Assimilagent from the Hive Planet. Would you be assimilated?"|librarian4]]
+VA figure appears above. Did not exist before the moment...\u000a\u000a"Halt! What are you doing here!!"\u000a\u000a[["I'm exploring the library."|librarian4]]\u000a[["I'm Assimilagent from the Hive Planet. Would you be assimilated?"|impossible]]
 p211
 sg20
-(lp212
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -684,15 +682,17 @@ I41
 I5
 I96
 I1
-tp213
-(dp214
-tp215
-Rp216
-sg28
-g216
-sg29
+tp212
+(dp213
+tp214
+Rp215
+sg26
 Vlibrarian3
-p217
+p216
+sg28
+g215
+sg29
+(lp217
 sbsa(dp218
 g12
 I00
@@ -706,12 +706,10 @@ Tiddler
 p220
 (dp221
 g18
-V"Impossible! I'm not kidding! I can't become one with filthy scum like you!"\u000a\u000a<<timedgoto "Start" 5 >>
+V"Impossible! I'm not kidding! I can't become one with filthy scum like you!"\u000a\u000a<<timedgoto "StageSelect" 5 >>
 p222
 sg20
-(lp223
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -721,15 +719,17 @@ I15
 I5
 I96
 I1
-tp224
-(dp225
-tp226
-Rp227
-sg28
-g227
-sg29
+tp223
+(dp224
+tp225
+Rp226
+sg26
 Vimpossible
-p228
+p227
+sg28
+g226
+sg29
+(lp228
 sbsa(dp229
 g12
 I00
@@ -746,9 +746,7 @@ g18
 V"This is a place of secret training of librarian ninja clan! Afraid that we must ask you to leave."\u000a\u000a[["Well, I guess that's fair."|StageSelect]]\u000a<<if $scientist eq true>>[["However, the library! A place of learning must be open to everyone! It's the rule of science!"|librarian5]]<<else>> <<endif>>
 p233
 sg20
-(lp234
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -758,15 +756,17 @@ I45
 I5
 I96
 I1
-tp235
-(dp236
-tp237
-Rp238
-sg28
-g238
-sg29
+tp234
+(dp235
+tp236
+Rp237
+sg26
 Vlibrarian4
-p239
+p238
+sg28
+g237
+sg29
+(lp239
 sbsa(dp240
 g12
 I00
@@ -783,9 +783,7 @@ g18
 V"I think... I never thought about it you're right."\u000a\u000a"The truth is, I want to create a library of free for everyone..."\u000a\u000a"But, the boss is contrary to it."\u000a\u000a"If you try to create something like that, I will be discharged from the clan of the librarian. I seek true knowledge... If not here, I wonder where to find it?"\u000a\u000a[["Come with me!"|librarian6]]
 p244
 sg20
-(lp245
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -795,15 +793,17 @@ I28
 I5
 I96
 I1
-tp246
-(dp247
-tp248
-Rp249
-sg28
-g249
-sg29
+tp245
+(dp246
+tp247
+Rp248
+sg26
 Vlibrarian5
-p250
+p249
+sg28
+g248
+sg29
+(lp250
 sbsa(dp251
 g12
 I00
@@ -820,9 +820,7 @@ g18
 V"I do not have any choice. I want to make the future of this world for the sake of knowledge."\u000a\u000a"I am Kasumi. [[Please, take me with you.|librarian7]]"\u000a
 p255
 sg20
-(lp256
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -832,15 +830,17 @@ I0
 I5
 I96
 I1
-tp257
-(dp258
-tp259
-Rp260
-sg28
-g260
-sg29
+tp256
+(dp257
+tp258
+Rp259
+sg26
 Vlibrarian6
-p261
+p260
+sg28
+g259
+sg29
+(lp261
 sbsa(dp262
 g12
 I00
@@ -857,9 +857,7 @@ g18
 VYou extend the assimilation tube from the back of your neck.\u000a\u000a"It's powerful... [[so much data!|librarian8]]"
 p266
 sg20
-(lp267
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -869,15 +867,17 @@ I32
 I5
 I96
 I1
-tp268
-(dp269
-tp270
-Rp271
-sg28
-g271
-sg29
+tp267
+(dp268
+tp269
+Rp270
+sg26
 Vlibrarian7
-p272
+p271
+sg28
+g270
+sg29
+(lp272
 sbsa(dp273
 g12
 I00
@@ -894,9 +894,7 @@ g18
 VYou complete the transmission of data. Kasumi's body fall to the ground.\u000a\u000a[[Her soul and power will be added to yours...|librarianend]]
 p277
 sg20
-(lp278
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -906,15 +904,17 @@ I0
 I5
 I96
 I1
-tp279
-(dp280
-tp281
-Rp282
-sg28
-g282
-sg29
+tp278
+(dp279
+tp280
+Rp281
+sg26
 Vlibrarian8
-p283
+p282
+sg28
+g281
+sg29
+(lp283
 sbsa(dp284
 g12
 I00
@@ -928,12 +928,10 @@ Tiddler
 p286
 (dp287
 g18
-VSTAGE COMPLETION SCREEN GOES HERE\u000a\u000a<<set $librarian = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
+V<<set $powerUp = "NINJA KUNAI">><<display PowerUp>>\u000a\u000a<<set $librarian = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
 p288
 sg20
-(lp289
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -943,15 +941,17 @@ I33
 I5
 I96
 I1
-tp290
-(dp291
-tp292
-Rp293
-sg28
-g293
-sg29
+tp289
+(dp290
+tp291
+Rp292
+sg26
 Vlibrarianend
-p294
+p293
+sg28
+g292
+sg29
+(lp294
 sbsa(dp295
 g12
 I00
@@ -968,9 +968,7 @@ g18
 VYou notices the woods on the west side, and the house, a little to the north, composed of baked goods, is located near the gurgling stream of lemonade.\u000a\u000a[[Explore the forest|forest1]]\u000a[[Go to the house by the stream|witch3]]
 p299
 sg20
-(lp300
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -980,15 +978,17 @@ I31
 I5
 I96
 I1
-tp301
-(dp302
-tp303
-Rp304
-sg28
-g304
-sg29
+tp300
+(dp301
+tp302
+Rp303
+sg26
 Vwitch2
-p305
+p304
+sg28
+g303
+sg29
+(lp305
 sbsa(dp306
 g12
 I00
@@ -1005,9 +1005,7 @@ g18
 VForest... tree is weighted down with candy. In the rustling undergrowth, the insects, the latter part of them, and sloshing syrup.\u000a\u000aTheir tusks click together with the sound of the metal. They will turn you into a jam.\u000a\u000a[[Continue to explore the forest|forest2]]\u000a[[Back to clearing|witch2]]
 p310
 sg20
-(lp311
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1017,15 +1015,17 @@ I0
 I5
 I96
 I1
-tp312
-(dp313
-tp314
-Rp315
-sg28
-g315
-sg29
+tp311
+(dp312
+tp313
+Rp314
+sg26
 Vforest1
-p316
+p315
+sg28
+g314
+sg29
+(lp316
 sbsa(dp317
 g12
 I00
@@ -1042,9 +1042,7 @@ g18
 VIt will be darker and darker. It is impossible to see your way through the dense mass of candy to hang around you all. Clicking sound of insects increases.\u000a\u000a[[Run!|witch2]]
 p321
 sg20
-(lp322
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1054,15 +1052,17 @@ I24
 I5
 I96
 I1
-tp323
-(dp324
-tp325
-Rp326
-sg28
-g326
-sg29
+tp322
+(dp323
+tp324
+Rp325
+sg26
 Vforest2
-p327
+p326
+sg28
+g325
+sg29
+(lp327
 sbsa(dp328
 g12
 I00
@@ -1079,9 +1079,7 @@ g18
 VThough you have a bad feeling, it looks like a pleasant little house...\u000a\u000aThe walls are made entirely of gingerbread, window frame is icing pipe. Slab of chocolate is laying on top of the roof, flowers sprouting from grass jelly of sweet grass.\u000a\u000aYou walk along the path that has been set for you to gate made \u200b\u200bof pretzels.\u000a\u000a[[Open the gate|witch4]]
 p332
 sg20
-(lp333
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1091,15 +1089,17 @@ I4
 I5
 I96
 I1
-tp334
-(dp335
-tp336
-Rp337
-sg28
-g337
-sg29
+tp333
+(dp334
+tp335
+Rp336
+sg26
 Vwitch3
-p338
+p337
+sg28
+g336
+sg29
+(lp338
 sbsa(dp339
 g12
 I00
@@ -1116,9 +1116,7 @@ g18
 VBell jangles somewhere in the distance.\u000a\u000aAt the top of you witch in an instant! She had nearly the same teleport ... She brandished her wand candy cane.\u000a\u000a"What are you doing in my kingdom?"\u000a\u000a[["I am here to look around."|lookaround]]\u000a[["I'm Assimilagent from the Hive Planet. Would you be assimilated?"|witch5]]
 p343
 sg20
-(lp344
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1128,15 +1126,17 @@ I26
 I5
 I96
 I1
-tp345
-(dp346
-tp347
-Rp348
-sg28
-g348
-sg29
+tp344
+(dp345
+tp346
+Rp347
+sg26
 Vwitch4
-p349
+p348
+sg28
+g347
+sg29
+(lp349
 sbsa(dp350
 g12
 I00
@@ -1153,9 +1153,7 @@ g18
 V"This place is mine! Is not a children's playground and turn you into a mouse of sugar!"\u000a\u000aSeems to be that you will be assimilated... instead of the witch...\u000a\u000a[[Run!|StageSelect]]
 p354
 sg20
-(lp355
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1165,15 +1163,17 @@ I0
 I5
 I96
 I1
-tp356
-(dp357
-tp358
-Rp359
-sg28
-g359
-sg29
+tp355
+(dp356
+tp357
+Rp358
+sg26
 Vlookaround
-p360
+p359
+sg28
+g358
+sg29
+(lp360
 sbsa(dp361
 g12
 I00
@@ -1190,9 +1190,7 @@ g18
 V"Assimilated... kekeke. Do you believe you are able to assimilate me! I'll take your power for myself!"\u000a\u000a"However, this might be interesting. Match me with the battle of wits if you think it is possible!"\u000a\u000a[["I'd rather not."|StageSelect]]\u000a[[Accept!|witch6]]
 p365
 sg20
-(lp366
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1202,15 +1200,17 @@ I36
 I5
 I96
 I1
-tp367
-(dp368
-tp369
-Rp370
-sg28
-g370
-sg29
+tp366
+(dp367
+tp368
+Rp369
+sg26
 Vwitch5
-p371
+p370
+sg28
+g369
+sg29
+(lp371
 sbsa(dp372
 g12
 I00
@@ -1227,9 +1227,7 @@ g18
 V"Then tell me! What is the alchemical symbol for gold?"\u000a\u000a[["Uh..."|lose]]\u000a<<if $scientist eq true>>[["How ridiculous, alchemy does not exist!"|lose]]<<else>> <<endif>>\u000a<<if $librarian eq true>>[["I know it from a long time... I'll draw it for you."|witch7]]<<else>> <<endif>>
 p376
 sg20
-(lp377
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1239,15 +1237,17 @@ I14
 I5
 I96
 I1
-tp378
-(dp379
-tp380
-Rp381
-sg28
-g381
-sg29
+tp377
+(dp378
+tp379
+Rp380
+sg26
 Vwitch6
-p382
+p381
+sg28
+g380
+sg29
+(lp382
 sbsa(dp383
 g12
 I00
@@ -1264,9 +1264,7 @@ g18
 V"Kekeke, you lose! It's bye-bye for you!"\u000a\u000a[[Run!|StageSelect]]
 p387
 sg20
-(lp388
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1276,15 +1274,17 @@ I44
 I5
 I96
 I1
-tp389
-(dp390
-tp391
-Rp392
-sg28
-g392
-sg29
+tp388
+(dp389
+tp390
+Rp391
+sg26
 Vlose
-p393
+p392
+sg28
+g391
+sg29
+(lp393
 sbsa(dp394
 g12
 I00
@@ -1301,9 +1301,7 @@ g18
 V"Very good! Now try this next! Do you have it in your legs as fast as your brain?"\u000a\u000aThe witch fires deadly bolts of lightning!\u000a\u000a[[Assimilate now!|assimilate]]\u000a[[No way! I beat her fairly!|witch8]]
 p398
 sg20
-(lp399
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1313,22 +1311,24 @@ I27
 I5
 I96
 I1
-tp400
-(dp401
-tp402
-Rp403
-sg28
-g403
-sg29
+tp399
+(dp400
+tp401
+Rp402
+sg26
 Vwitch7
-p404
+p403
+sg28
+g402
+sg29
+(lp404
 sbsa(dp405
 g12
 I00
 sg13
 (lp406
-F990.0
-aF1130.0
+F850.0
+aF1410.0
 asg15
 (itiddlywiki
 Tiddler
@@ -1338,9 +1338,7 @@ g18
 V"Ughaaaaaaaaaa!"\u000a\u000aThe assimilation cord stretches into the witch's neck.\u000a\u000a"No! No!"\u000a\u000aHer struggles are damaging the data!\u000a\u000aYou can't go on this way... it's a failure.\u000a\u000a[[Retreat.|StageSelect]]
 p409
 sg20
-(lp410
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1350,15 +1348,17 @@ I56
 I5
 I96
 I1
-tp411
-(dp412
-tp413
-Rp414
-sg28
-g414
-sg29
+tp410
+(dp411
+tp412
+Rp413
+sg26
 Vassimilate
-p415
+p414
+sg28
+g413
+sg29
+(lp415
 sbsa(dp416
 g12
 I00
@@ -1375,9 +1375,7 @@ g18
 VWith extreme speed, your talent by hivequeen, you dodge the lightning to you!\u000a\u000a"Very good! You are a fine warrior actually..."\u000a\u000a"I am Astra. My mind has been changed. [[I'll lend you my power.|witch9]]"
 p420
 sg20
-(lp421
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1387,15 +1385,17 @@ I50
 I5
 I96
 I1
-tp422
-(dp423
-tp424
-Rp425
-sg28
-g425
-sg29
+tp421
+(dp422
+tp423
+Rp424
+sg26
 Vwitch8
-p426
+p425
+sg28
+g424
+sg29
+(lp426
 sbsa(dp427
 g12
 I00
@@ -1412,9 +1412,7 @@ g18
 VYou extend the assimilation tube from the back of your neck.\u000a\u000a"Kekeke... like this, we'll become [[even stronger.|witch10]]"
 p431
 sg20
-(lp432
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1424,15 +1422,17 @@ I5
 I5
 I96
 I1
-tp433
-(dp434
-tp435
-Rp436
-sg28
-g436
-sg29
+tp432
+(dp433
+tp434
+Rp435
+sg26
 Vwitch9
-p437
+p436
+sg28
+g435
+sg29
+(lp437
 sbsa(dp438
 g12
 I00
@@ -1449,9 +1449,7 @@ g18
 VYou complete the transmission of data. Astra's body fall to the ground.\u000a\u000a[[Her soul and power will be added to yours...|witchend]]
 p442
 sg20
-(lp443
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1461,15 +1459,17 @@ I40
 I5
 I96
 I1
-tp444
-(dp445
-tp446
-Rp447
-sg28
-g447
-sg29
+tp443
+(dp444
+tp445
+Rp446
+sg26
 Vwitch10
-p448
+p447
+sg28
+g446
+sg29
+(lp448
 sbsa(dp449
 g12
 I00
@@ -1483,12 +1483,10 @@ Tiddler
 p451
 (dp452
 g18
-VSTAGE COMPLETION SCREEN GOES HERE\u000a\u000a<<set $witch = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
+V<<set $powerUp = "WITCH BEAM">><<display PowerUp>>\u000a\u000a<<set $witch = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
 p453
 sg20
-(lp454
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1498,15 +1496,17 @@ I4
 I5
 I96
 I1
-tp455
-(dp456
-tp457
-Rp458
-sg28
-g458
-sg29
+tp454
+(dp455
+tp456
+Rp457
+sg26
 Vwitchend
-p459
+p458
+sg28
+g457
+sg29
+(lp459
 sbsa(dp460
 g12
 I00
@@ -1523,9 +1523,7 @@ g18
 VGently, Crystal Warrior floats down in front of your eyes.\u000a\u000aHer skin is made of pink gem completely, her hair is blowing in the wind around her.\u000a\u000aShe is naked, shows no shame.\u000a\u000a[[She has the power emitted.|crystal3]]
 p464
 sg20
-(lp465
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1535,15 +1533,17 @@ I11
 I5
 I96
 I1
-tp466
-(dp467
-tp468
-Rp469
-sg28
-g469
-sg29
+tp465
+(dp466
+tp467
+Rp468
+sg26
 Vcrystal2
-p470
+p469
+sg28
+g468
+sg29
+(lp470
 sbsa(dp471
 g12
 I00
@@ -1560,9 +1560,7 @@ g18
 V"You are doing well."\u000a\u000a"You have a lot of powerful allies. They will help you in this next fight."\u000a\u000a"It wishes to do so, too... here, you and I, [[go into the end of the universe.|crystal4]]"
 p475
 sg20
-(lp476
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1572,15 +1570,17 @@ I53
 I5
 I96
 I1
-tp477
-(dp478
-tp479
-Rp480
-sg28
-g480
-sg29
+tp476
+(dp477
+tp478
+Rp479
+sg26
 Vcrystal3
-p481
+p480
+sg28
+g479
+sg29
+(lp481
 sbsa(dp482
 g12
 I00
@@ -1597,9 +1597,7 @@ g18
 VYou extend the assimilation tube from the back of your neck.\u000a\u000aCrystal Warrior [[takes it in her hand|crystal5]]...
 p486
 sg20
-(lp487
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1609,15 +1607,17 @@ I16
 I5
 I96
 I1
-tp488
-(dp489
-tp490
-Rp491
-sg28
-g491
-sg29
+tp487
+(dp488
+tp489
+Rp490
+sg26
 Vcrystal4
-p492
+p491
+sg28
+g490
+sg29
+(lp492
 sbsa(dp493
 g12
 I00
@@ -1634,9 +1634,7 @@ g18
 VYou have never felt such a feeling...\u000a\u000aYou are floating in the infinite galaxy of stars...\u000a\u000aFeel yourself become one with Crystal Warrior...\u000a\u000aHer name resound in your head...\u000a\u000a[["I am... Fumaya..."|crystal6]]
 p497
 sg20
-(lp498
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1646,15 +1644,17 @@ I47
 I5
 I96
 I1
-tp499
-(dp500
-tp501
-Rp502
-sg28
-g502
-sg29
+tp498
+(dp499
+tp500
+Rp501
+sg26
 Vcrystal5
-p503
+p502
+sg28
+g501
+sg29
+(lp503
 sbsa(dp504
 g12
 I00
@@ -1671,9 +1671,7 @@ g18
 VYou complete the transmission of data. Fumaya's body fall to the ground.\u000a\u000a[[Her soul and power will be added to yours...|crystalend]]
 p508
 sg20
-(lp509
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1683,15 +1681,17 @@ I16
 I5
 I96
 I1
-tp510
-(dp511
-tp512
-Rp513
-sg28
-g513
-sg29
+tp509
+(dp510
+tp511
+Rp512
+sg26
 Vcrystal6
-p514
+p513
+sg28
+g512
+sg29
+(lp514
 sbsa(dp515
 g12
 I00
@@ -1705,12 +1705,10 @@ Tiddler
 p517
 (dp518
 g18
-VSTAGE COMPLETION SCREEN GOES HERE\u000a\u000a<<set $crystal = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
+V<<set $powerUp = "CRYSTAL DEFENDER">><<display PowerUp>>\u000a\u000a<<set $crystal = true>>\u000a\u000a[[TRY NEXT STAGE|StageSelect]]
 p519
 sg20
-(lp520
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1720,34 +1718,34 @@ I59
 I5
 I96
 I1
-tp521
-(dp522
-tp523
-Rp524
-sg28
-g524
-sg29
+tp520
+(dp521
+tp522
+Rp523
+sg26
 Vcrystalend
-p525
+p524
+sg28
+g523
+sg29
+(lp525
 sbsa(dp526
 g12
 I00
 sg13
 (lp527
 F850.0
-aF1830.0
+aF1690.0
 asg15
 (itiddlywiki
 Tiddler
 p528
 (dp529
 g18
-V(image of Endless Horror here)\u000a\u000aFinally, with all the powers of girls, you're ready to confront it.\u000a\u000a[[The Endless Horror...|endless2]]
+V<<centreImage "http://explode.cutely.co/twine/assimil/resources/endlessscroll.gif">>\u000aFinally, with all the powers of girls, you're ready to confront it.\u000a\u000a[[The Endless Horror...|Battle]]\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p530
 sg20
-(lp531
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1757,15 +1755,17 @@ I55
 I5
 I96
 I1
-tp532
-(dp533
-tp534
-Rp535
-sg28
-g535
-sg29
+tp531
+(dp532
+tp533
+Rp534
+sg26
 Vendless1
-p536
+p535
+sg28
+g534
+sg29
+(lp536
 sbsa(dp537
 g12
 I00
@@ -1779,49 +1779,10 @@ Tiddler
 p539
 (dp540
 g18
-Vthis should do some boss mechanicy stuff yo\u000a\u000abut right now let's just test the [[endings|weak]]
+VMonster is weak now!\u000a\u000aWhat will you do?\u000a\u000a[[Destruction|destruction]]\u000a[[Assimilate|assimilation]]\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>><<endBattle>>
 p541
 sg20
-(lp542
-sg22
-g23
-((I2013
-I4
-I6
-I13
-I20
-I11
-I5
-I96
-I1
-tp543
-(dp544
-tp545
-Rp546
-sg28
-g546
-sg29
-Vendless2
-p547
-sbsa(dp548
-g12
-I00
-sg13
-(lp549
-F850.0
-aF2110.0
-asg15
-(itiddlywiki
-Tiddler
-p550
-(dp551
-g18
-VMonster is weak now!\u000a\u000aWhat will you do?\u000a\u000a[[Destruction|destruction]]\u000a[[Assimilate|assimilate]]
-p552
-sg20
-(lp553
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1831,34 +1792,34 @@ I47
 I5
 I96
 I1
-tp554
-(dp555
-tp556
-Rp557
-sg28
-g557
-sg29
+tp542
+(dp543
+tp544
+Rp545
+sg26
 Vweak
-p558
-sbsa(dp559
+p546
+sg28
+g545
+sg29
+(lp547
+sbsa(dp548
 g12
 I00
 sg13
-(lp560
-F710.0
-aF2250.0
+(lp549
+F570.0
+aF2110.0
 asg15
 (itiddlywiki
 Tiddler
-p561
-(dp562
+p550
+(dp551
 g18
-VCalled the power of the Crystal Warrior, you fire a laser blast full in the core of your monster.\u000a\u000aIt has been defeated...\u000a\u000aSave hivequeen, you are getting a lot of powerful new ally.\u000a\u000aNow, together, the threat was defeated, you are free to explore the universe...\u000a\u000aAnd... each other...\u000a\u000a[[THE END|credits]]
-p563
+VCalled the power of the Crystal Warrior, you fire a laser blast full in the core of your monster.\u000a\u000aIt has been defeated...\u000a\u000aSave hivequeen, you are getting a lot of powerful new ally.\u000a\u000aNow, together, the threat was defeated, you are free to explore the universe...\u000a\u000aAnd... each other...\u000a\u000a[[THE END|CreditsConcept]]\u000a<<set $ending = "destruction">>
+p552
 sg20
-(lp564
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1868,34 +1829,34 @@ I20
 I5
 I96
 I1
-tp565
-(dp566
-tp567
-Rp568
-sg28
-g568
-sg29
+tp553
+(dp554
+tp555
+Rp556
+sg26
 Vdestruction
-p569
-sbsa(dp570
+p557
+sg28
+g556
+sg29
+(lp558
+sbsa(dp559
 g12
 I00
 sg13
-(lp571
-F850.0
-aF2250.0
+(lp560
+F1130.0
+aF2110.0
 asg15
 (itiddlywiki
 Tiddler
-p572
-(dp573
+p561
+(dp562
 g18
 VA long time ago... you remember, too, you, was considered a monster.\u000a\u000aThis creature is not very different from you. So... you can learn from it... maybe.\u000a\u000aYou extend the assimilation tube from the back of your neck.\u000a\u000a[["Please join with me."|assimilate2]]
-p574
+p563
 sg20
-(lp575
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1905,34 +1866,34 @@ I36
 I5
 I96
 I1
-tp576
-(dp577
-tp578
-Rp579
+tp564
+(dp565
+tp566
+Rp567
+sg26
+Vassimilation
+p568
 sg28
-g579
+g567
 sg29
-Vassimilate
-p580
-sbsa(dp581
+(lp569
+sbsa(dp570
 g12
 I00
 sg13
-(lp582
-F850.0
-aF2390.0
+(lp571
+F1130.0
+aF2250.0
 asg15
 (itiddlywiki
 Tiddler
-p583
-(dp584
+p572
+(dp573
 g18
 VHeart of the monster! It is very powerful...\u000a\u000aYou will feel your world is expanding... Throbbing with the power of the monster.\u000a\u000aYou feel hivequeen to accept your gift...\u000a\u000aYou complete the transmission of data. Your body fall to the void.\u000a\u000a[[Your soul and power will be added to the Endless Horror's...|assimilate3]]\u000a
-p585
+p574
 sg20
-(lp586
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1942,34 +1903,34 @@ I0
 I5
 I96
 I1
-tp587
-(dp588
-tp589
-Rp590
-sg28
-g590
-sg29
+tp575
+(dp576
+tp577
+Rp578
+sg26
 Vassimilate2
-p591
-sbsa(dp592
+p579
+sg28
+g578
+sg29
+(lp580
+sbsa(dp581
 g12
 I00
 sg13
-(lp593
-F850.0
-aF2530.0
+(lp582
+F1130.0
+aF2390.0
 asg15
 (itiddlywiki
 Tiddler
-p594
-(dp595
+p583
+(dp584
 g18
 VYou are... [[powerful|assimilate4]]...
-p596
+p585
 sg20
-(lp597
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -1979,34 +1940,34 @@ I23
 I5
 I96
 I1
-tp598
-(dp599
-tp600
-Rp601
-sg28
-g601
-sg29
+tp586
+(dp587
+tp588
+Rp589
+sg26
 Vassimilate3
-p602
-sbsa(dp603
+p590
+sg28
+g589
+sg29
+(lp591
+sbsa(dp592
 g12
 I00
 sg13
-(lp604
-F850.0
-aF2670.0
+(lp593
+F1130.0
+aF2530.0
 asg15
 (itiddlywiki
 Tiddler
-p605
-(dp606
+p594
+(dp595
 g18
-V(roar goes here)\u000a\u000a[[THE END|credits]]
-p607
+V[[THE END|CreditsConcept]]\u000a\u000a<<playAudio "roar">>\u000a<<set $ending = "assimilate">>
+p596
 sg20
-(lp608
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2016,36 +1977,34 @@ I57
 I5
 I96
 I1
-tp609
-(dp610
-tp611
-Rp612
-sg28
-g612
-sg29
+tp597
+(dp598
+tp599
+Rp600
+sg26
 Vassimilate4
-p613
-sbsa(dp614
+p601
+sg28
+g600
+sg29
+(lp602
+sbsa(dp603
 g12
 I00
 sg13
-(lp615
+(lp604
 F710.0
 aF10.0
 asg15
 (itiddlywiki
 Tiddler
-p616
-(dp617
+p605
+(dp606
 g18
 Vversion.extensions.timedgotoMacro={major:1,minor:0,revision:0};macros["timedgoto"]={timer:null,handler:function(a,b,c,d){var t=c[c.length-1];\u000avar d=d.fullArgs();d=d.slice(0,d.lastIndexOf(t));d=eval(Wikifier.parse(d));if(d+""){if(this.timer){clearTimeout(this.timer);\u000a}var s=state.history[0].passage.title;this.timer=setTimeout(function(){if(state.history[0].passage.title==s){state.display(d,a);\u000a}},(parseInt(t)||0)*500);}}};
-p618
+p607
 sg20
-(lp619
-Vscript
-p620
-asg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2055,110 +2014,36 @@ I27
 I5
 I96
 I1
-tp621
-(dp622
-tp623
-Rp624
-sg28
-g624
-sg29
+tp608
+(dp609
+tp610
+Rp611
+sg26
 Vtimedgoto
-p625
-sbsa(dp626
-g12
-I00
-sg13
-(lp627
-F2390.0
-aF1130.0
-asg15
-(itiddlywiki
-Tiddler
-p628
-(dp629
-g18
-V<<if $scientist neq true>>[[Scientist Bruiser Tempest|scientist1]]<<else>>Scientist Bruiser Tempest<<endif>>\u000a\u000a<<if $librarian neq true>>[[Librarian Ninja Kasumi|librarian1]]<<else>>Librarian Ninja Kasumi<<endif>>\u000a\u000a<<if $witch neq true>>[[Witch Dominatrix Astra|witch1]]<<else>>Witch Dominatrix Astra<<endif>>\u000a\u000a<<if $crystal neq true>>[[Crystal Warrior Fumaya|crystal1]]<<else>>Crystal Warrior Fumaya<<endif>>\u000a\u000a<<if $scientist eq true AND $librarian eq true AND $witch eq true AND $crystal eq true>>[[ENDLESS HORROR|endless1]]<<else>> <<endif>>
-p630
-sg20
-(lp631
-sg22
-g23
-((I2013
-I4
-I6
-I13
-I32
-I27
-I5
-I96
-I1
-tp632
-(dp633
-tp634
-Rp635
+p612
 sg28
-g635
+g611
 sg29
-VStage Select Orig
-p636
-sbsa(dp637
+(lp613
+Vscript
+p614
+asbsa(dp615
 g12
 I00
 sg13
-(lp638
-F850.0
-aF2810.0
-asg15
-(itiddlywiki
-Tiddler
-p639
-(dp640
-g18
-VGAME CONCEPT\u000aSpanglypants\u000aRIKA\u000a\u000aPROGRAM\u000aRIKA\u000a\u000aART ELEMENT\u000aSpanglypants\u000aRIKA\u000aSQUARE CO.\u000aCAPCOM\u000aFoxRichards/DEVIANTART\u000a\u000aSTORY\u000aSpanglypants\u000a\u000aMUSIC ELEMENT\u000aCAPCOM\u000a\u000aSOUND ELEMENT\u000aSQUARE CO.\u000a\u000aINSPIRATION\u000aMEGA MAN series\u000adating sims\u000avintage bootleg games\u000athe BORG\u000a\u000aYOU ACHIEVED GREAT!!\u000aTHANK YOU!! PLAY AGAIN
-p641
-sg20
-(lp642
-sg22
-g23
-((I2013
-I4
-I6
-I13
-I38
-I6
-I5
-I96
-I1
-tp643
-(dp644
-tp645
-Rp646
-sg28
-g646
-sg29
-Vcredits
-p647
-sbsa(dp648
-g12
-I00
-sg13
-(lp649
+(lp616
 F570.0
 aF10.0
 asg15
 (itiddlywiki
 Tiddler
-p650
-(dp651
+p617
+(dp618
 g18
 Vversion.extensions["cyclinglinkMacro"]={major:3,minor:1,revision:1};macros.cyclinglink={handler:function(a,b,c){var l=Wikifier.createInternalLink(a,null);\u000al.className="internalLink cyclingLink";l.setAttribute("data-cycle",0);var v="";var end=false;\u000aif(c.length&&c[0][0]=="$"){v=c[0].slice(1);c.shift();}if(c[c.length-1]=="end"){end=true;\u000ac.pop();}var h=state.history[0].variables;for(var i=0;i<c.length;i++){var on=(i==Math.max(c.indexOf(h[v]),0));\u000avar d=insertElement(null,"span",null,"cyclingLink"+((on)?"En":"Dis")+"abled");if(on){h[v]=c[ i ];\u000al.setAttribute("data-cycle",i);}insertText(d,c[ i ]);l.appendChild(d);}l.onclick=function(){var t=this.childNodes;\u000avar d="cyclingLink";var u=this.getAttribute("data-cycle")-0;var m=t.length;if(end&&u==m-2){var n=this.removeChild(t[u+1]);\u000an.className=d+"End";this.parentNode.replaceChild(n,this);return;}t[u].classList.toggle(d+"Enabled");\u000at[u].classList.toggle(d+"Disabled");u=(u+1)%m;if(v){h[v]=c[u];}t[u].classList.toggle(d+"Enabled");\u000at[u].classList.toggle(d+"Disabled");this.setAttribute("data-cycle",u);};},init:function(){addStyle(".cyclingLinkDisabled { display:none; } ");\u000a}};macros.cyclinglink.init();
-p652
+p619
 sg20
-(lp653
-Vscript
-p654
-asg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2168,36 +2053,36 @@ I32
 I5
 I96
 I1
-tp655
-(dp656
-tp657
-Rp658
-sg28
-g658
-sg29
+tp620
+(dp621
+tp622
+Rp623
+sg26
 Vcyclinglink
-p659
-sbsa(dp660
+p624
+sg28
+g623
+sg29
+(lp625
+Vscript
+p626
+asbsa(dp627
 g12
 I00
 sg13
-(lp661
+(lp628
 F1970.0
 aF10.0
 asg15
 (itiddlywiki
 Tiddler
-p662
-(dp663
+p629
+(dp630
 g18
-Vversion.extensions['gameMacros'] = {\u000a	major: 1,\u000a	minor: 0,\u000a	revision: 0\u000a};\u000amacros['animateStart'] = {\u000a	handler: function (g, e, f, b) {\u000a		macros['animateStart'].interval =\u000a		setInterval(function() {\u000a			var startTag = $(f[0]);\u000a			if (startTag != null) {\u000a				var currentColour = startTag.currentColour;\u000a				var nextColour;\u000a				if (currentColour == null || currentColour == "#ffffff") {\u000a					nextColour = "#888888";\u000a				} else if (currentColour == "#888888") {\u000a					nextColour = "#111111";\u000a				} else {\u000a					nextColour = "#ffffff";\u000a				}\u000a				startTag.style.color = nextColour;\u000a				startTag.currentColour = nextColour;\u000a			}\u000a		}, 40);\u000a	}\u000a}\u000amacros['stopStartAnimation'] = {\u000a	handler: function (g, e, f, b) {\u000a		if (macros['animateStart'].interval != null) {\u000a			clearInterval(macros['animateStart'].interval);\u000a			macros['animateStart'].interval = null;\u000a		}\u000a	}\u000a}\u000amacros['audioLoop'] = {\u000a	audioLoops: {},\u000a	init: function() {\u000a		HTMLAudioElement.prototype.playLoop = function() {\u000a			if (this.resetTo == 0) {\u000a				// Easy - just create a normal interval as we've already done\u000a				this.play();\u000a\u000a				// Have to save "this" for the anon function\u000a				var _self = this;\u000a				this.interval = setInterval(function() {\u000a					_self.currentTime = _self.resetTo;\u000a				}, this.loopLen);\u000a			} else {\u000a				// This is the "hard" case because the loops are two different lengths - start by saving the tag\u000a				var _self = this;\u000a				var repeatLen = this.loopLen - (1000 * this.resetTo);\u000a\u000a				this.play();\u000a				setTimeout(function() {\u000a					_self.currentTime = _self.resetTo;\u000a					_self.interval = setInterval(function() {\u000a						_self.currentTime = _self.resetTo;\u000a					}, repeatLen);\u000a				}, this.loopLen);\u000a			}\u000a		}\u000a		HTMLAudioElement.prototype.stopLoop = function() {\u000a			clearInterval(this.interval);\u000a			this.pause();\u000a			this.currentTime = 0;\u000a		}\u000a	},\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var audioSource = f[1];\u000a		var loopLen = f[2];\u000a		var restartAt = (f[3] > 0) ? f[3] : 0;\u000a\u000a		var tag = document.createElement("audio");\u000a		var source= document.createElement('source');\u000a		if (tag.canPlayType('audio/mpeg;')) {\u000a		    source.type= 'audio/mpeg';\u000a		    source.src= audioSource + '.mp3';\u000a		} else {\u000a		    source.type= 'audio/ogg';\u000a		    source.src= audioSource + '.ogg';\u000a		}\u000a		tag.appendChild(source);\u000a		tag.load();\u000a\u000a		// Save the loop info\u000a		tag.audioTag = audioTag;\u000a		tag.loopLen = loopLen;\u000a		tag.resetTo = restartAt;\u000a\u000a		// And whether we can play or not\u000a		tag.isReady = false;\u000a\u000a		// Save the tag\u000a		macros['audioLoop'].audioLoops[audioTag] = tag;\u000a\u000a		tag.listener = function() {\u000a			tag.isReady = true;\u000a			tag.removeEventListener('canplaythrough', this.listener);\u000a		}\u000a		tag.addEventListener('canplaythrough', tag.listener, true);\u000a	}\u000a}\u000amacros['playAudio'] = {\u000a	pendingIntervals: {},\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var tag = macros['audioLoop'].audioLoops[audioTag];\u000a		if (tag == null) {\u000a			console.log("Tried to play audio stream tagged \u005c'" + audioTag + "\u005c' without loading it.");\u000a			return;\u000a		}\u000a\u000a		// Can we just play?\u000a		if (tag.isReady) {\u000a			tag.play();\u000a		} else {\u000a			// The audio wasn't loaded yet - we could do this a better way, but just to avoid a race condition\u000a			// we're just going to poll\u000a			macros['playAudio'].pendingIntervals[audioTag] = setInterval(function() {\u000a				if (tag.isReady) {\u000a					tag.play();\u000a					clearInterval(macros['playAudio'].pendingIntervals[audioTag]);\u000a					macros['playAudio'].pendingIntervals[audioTag] = null;\u000a				}\u000a			}, 10);\u000a		}\u000a	}\u000a}\u000amacros['startAudioLoop'] = {\u000a	pendingIntervals: {},\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var tag = macros['audioLoop'].audioLoops[audioTag];\u000a		if (tag == null) {\u000a			console.log("Tried to play audio stream tagged \u005c'" + audioTag + "\u005c' without loading it.");\u000a			return;\u000a		}\u000a\u000a		// Can we just play?\u000a		if (tag.isReady) {\u000a			tag.playLoop();\u000a		} else {\u000a			// The audio wasn't loaded yet - we could do this a better way, but just to avoid a race condition\u000a			// we're just going to poll\u000a			macros['startMusicLoop'].pendingIntervals[audioTag] = setInterval(function() {\u000a				if (tag.isReady) {\u000a					tag.playLoop();\u000a					clearInterval(macros['startMusicLoop'].pendingIntervals[audioTag]);\u000a					macros['startMusicLoop'].pendingIntervals[audioTag] = null;\u000a				}\u000a			}, 10);\u000a		}\u000a	}\u000a}\u000amacros['stopAudioLoop'] = {\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var tag = macros['audioLoop'].audioLoops[audioTag];\u000a		if (tag != null) {\u000a			tag.stopLoop();\u000a			tag.interval = null;\u000a		}\u000a	}\u000a}\u000amacros['teletype'] = {\u000a	handler: function (g, e, f, b) {\u000a		if (f[0] == null) {\u000a			return;\u000a		}\u000a		var delayLen = (f[1] == null) ? 100 : f[1];\u000a\u000a		// First we create a span to type into and add it to the document\u000a		var ttSpan = insertElement(null, "span", null, "teletype");\u000a		g.appendChild(ttSpan);\u000a\u000a		jQuery(function(){\u000a			jQuery(ttSpan).teletype({\u000a				text: f[0],\u000a				animDelay: delayLen\u000a			});\u000a		});\u000a\u000a	}\u000a}\u000amacros['imageLink'] = {\u000a	handler: function (g, e, f, b) {\u000a		var imageTag = insertElement(null, "img", f[1], "imageLink");\u000a		imageTag.onclick = function() {\u000a			state.display(imageTag.id, imageTag);\u000a		}\u000a		g.appendChild(imageTag);\u000a	}\u000a}\u000a
-p664
+Vversion.extensions['gameMacros'] = {\u000a	major: 1,\u000a	minor: 0,\u000a	revision: 0\u000a};\u000amacros['animateStart'] = {\u000a	handler: function (g, e, f, b) {\u000a		macros['animateStart'].interval =\u000a		setInterval(function() {\u000a			var startTag = $(f[0]);\u000a			if (startTag != null) {\u000a				var currentColour = startTag.currentColour;\u000a				var nextColour;\u000a				if (currentColour == null || currentColour == "#ffffff") {\u000a					nextColour = "#888888";\u000a				} else if (currentColour == "#888888") {\u000a					nextColour = "#111111";\u000a				} else {\u000a					nextColour = "#ffffff";\u000a				}\u000a				startTag.style.color = nextColour;\u000a				startTag.currentColour = nextColour;\u000a			}\u000a		}, 40);\u000a	}\u000a}\u000amacros['stopStartAnimation'] = {\u000a	handler: function (g, e, f, b) {\u000a		if (macros['animateStart'].interval != null) {\u000a			clearInterval(macros['animateStart'].interval);\u000a			macros['animateStart'].interval = null;\u000a		}\u000a	}\u000a}\u000amacros['playAudio'] = {\u000a	pendingIntervals: {},\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var tag = macros['audioLoop'].audioLoops[audioTag];\u000a		if (tag == null) {\u000a			console.log("Tried to play audio stream tagged \u005c'" + audioTag + "\u005c' without loading it.");\u000a			return;\u000a		}\u000a\u000a		// Can we just play?\u000a		if (tag.isReady) {\u000a			tag.play();\u000a		} else {\u000a			// The audio wasn't loaded yet - we could do this a better way, but just to avoid a race condition\u000a			// we're just going to poll\u000a			macros['playAudio'].pendingIntervals[audioTag] = setInterval(function() {\u000a				if (tag.isReady) {\u000a					tag.play();\u000a					clearInterval(macros['playAudio'].pendingIntervals[audioTag]);\u000a					macros['playAudio'].pendingIntervals[audioTag] = null;\u000a				}\u000a			}, 10);\u000a		}\u000a	}\u000a}\u000amacros['startAudioLoop'] = {\u000a	pendingIntervals: {},\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var tag = macros['audioLoop'].audioLoops[audioTag];\u000a		if (tag == null) {\u000a			console.log("Tried to play audio stream tagged \u005c'" + audioTag + "\u005c' without loading it.");\u000a			return;\u000a		}\u000a\u000a		// Can we just play?\u000a		if (tag.isReady) {\u000a			tag.playLoop();\u000a		} else {\u000a			// The audio wasn't loaded yet - we could do this a better way, but just to avoid a race condition\u000a			// we're just going to poll\u000a			macros['startMusicLoop'].pendingIntervals[audioTag] = setInterval(function() {\u000a				if (tag.isReady) {\u000a					tag.playLoop();\u000a					clearInterval(macros['startMusicLoop'].pendingIntervals[audioTag]);\u000a					macros['startMusicLoop'].pendingIntervals[audioTag] = null;\u000a				}\u000a			}, 10);\u000a		}\u000a	}\u000a}\u000amacros['stopAudioLoop'] = {\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var tag = macros['audioLoop'].audioLoops[audioTag];\u000a		if (tag != null) {\u000a			tag.stopLoop();\u000a		}\u000a	}\u000a}\u000amacros['audioLoop'] = {\u000a	audioLoops: {},\u000a	init: function() {\u000a		HTMLAudioElement.prototype.playLoop = function() {\u000a			// Easy - just create a normal interval as we've already done\u000a			this.play();\u000a\u000a			// Have to save "this" for the anon function\u000a			var _self = this;\u000a			this.interval = setInterval(function() {\u000a				_self.currentTime = _self.resetTo;\u000a			}, this.loopLen);\u000a		}\u000a		HTMLAudioElement.prototype.stopLoop = function() {\u000a			clearInterval(this.interval);\u000a			this.interval = null;\u000a			this.pause();\u000a			this.currentTime = 0;\u000a		}\u000a	},\u000a	handler: function (g, e, f, b) {\u000a		var audioTag = f[0];\u000a		var audioSource = f[1];\u000a		var loopLen = f[2];\u000a		var restartAt = (f[3] > 0) ? f[3] : 0;\u000a\u000a		var tag = document.createElement("audio");\u000a		var source= document.createElement('source');\u000a		if (tag.canPlayType('audio/mpeg;')) {\u000a		    source.type= 'audio/mpeg';\u000a		    source.src= audioSource + '.mp3';\u000a		} else {\u000a		    source.type= 'audio/ogg';\u000a		    source.src= audioSource + '.ogg';\u000a		}\u000a		tag.appendChild(source);\u000a\u000a		// And whether we can play or not\u000a		tag.isReady = false;\u000a\u000a		// Save the tag\u000a		macros['audioLoop'].audioLoops[audioTag] = tag;\u000a\u000a		tag.listener = function() {\u000a			tag.isReady = true;\u000a			tag.removeEventListener('canplaythrough', tag.listener);\u000a		}\u000a		tag.addEventListener('canplaythrough', tag.listener, true);\u000a\u000a		// Save the loop info\u000a		tag.audioTag = audioTag;\u000a		tag.loopLen = loopLen;\u000a		tag.resetTo = restartAt;\u000a\u000a		// ahhahah - do this "in the background"\u000a		setTimeout(function() {\u000a			tag.load();\u000a		}, 1);\u000a	}\u000a}\u000amacros['teletype'] = {\u000a	handler: function (g, e, f, b) {\u000a		if (f[0] == null) {\u000a			return;\u000a		}\u000a		var delayLen = (f[1] == null) ? 100 : f[1];\u000a\u000a		// First we create a span to type into and add it to the document\u000a		var ttSpan = insertElement(null, "span", null, "teletype");\u000a		if (f[2] == null) {\u000a			g.appendChild(ttSpan);\u000a		} else {\u000a			setTimeout(function() {\u000a				$(f[2]).appendChild(ttSpan);\u000a			}, 5);\u000a		}\u000a\u000a		jQuery(function(){\u000a			jQuery(ttSpan).teletype({\u000a				text: f[0],\u000a				animDelay: delayLen\u000a			});\u000a		});\u000a\u000a	}\u000a}\u000amacros['centreImage'] = {\u000a	handler: function (g, e, f, b) {\u000a		var imageTag = insertElement(null, "img", null, "centredImage");\u000a		imageTag.src = f[0];\u000a		g.appendChild(imageTag);\u000a	}\u000a}\u000amacros['centreText'] = {\u000a	handler: function (g, e, f, b) {\u000a		var divTag = insertElement(null, "div", null, "centredText " + f[1]);\u000a		divTag.textContent = f[0];\u000a		g.appendChild(divTag);\u000a	}\u000a}\u000amacros['fadeIn'] = {\u000a	handler: function (g, e, f, b) {\u000a		var content;\u000a		if (f[0].charAt(0) == '$') {\u000a			content = state.history[0].variables[f[0].substring(1)];\u000a		} else {\u000a			content = f[0];\u000a		}\u000a\u000a		var divTag = insertElement(null, "div", null, "centredText " + f[1]);\u000a		divTag.textContent = content;\u000a		divTag.itteration = 0;\u000a		divTag.style.opacity = 0;\u000a		g.appendChild(divTag);\u000a\u000a		macros['fadeIn'].interval =\u000a		setInterval(function() {\u000a			if (divTag.style.opacity >= 1) {\u000a				clearInterval(macros['fadeIn'].interval);\u000a				macros['fadeIn'].interval = null;\u000a			} else {\u000a				++divTag.itteration;\u000a				var val = Math.pow(Math.log(divTag.itteration), 3) / 300.0;\u000a				divTag.style.opacity = (val > 0) ? val : 0;\u000a			}\u000a		}, 5);\u000a	}\u000a}\u000amacros['creditImage'] = {\u000a	handler: function (g, e, f, b) {\u000a		setTimeout(function() {\u000a			$('creditsLeftImage').src = f[0];\u000a		}, 5);\u000a	}\u000a}
+p631
 sg20
-(lp665
-Vscript
-p666
-asg22
-g23
+g21
 ((I2013
 I4
 I5
@@ -2207,36 +2092,36 @@ I17
 I4
 I95
 I1
-tp667
-(dp668
-tp669
-Rp670
-sg28
-g670
-sg29
+tp632
+(dp633
+tp634
+Rp635
+sg26
 VRIKA
-p671
-sbsa(dp672
+p636
+sg28
+g635
+sg29
+(lp637
+Vscript
+p638
+asbsa(dp639
 g12
 I00
 sg13
-(lp673
+(lp640
 F2110.0
 aF290.0
 asg15
 (itiddlywiki
 Tiddler
-p674
-(dp675
+p641
+(dp642
 g18
-V@font-face {\u000a	font-family: retro-font;\u000a	src: url('C64_User_v1.0-STYLE.ttf');\u000a}\u000a\u000aimg#titleImage {\u000a	display: block;\u000a	margin-left: auto;\u000a	margin-right: auto;\u000a}\u000a\u000aa#Story,\u000aa#Story:hover {\u000a	display:block;\u000a	text-align: center;\u000a	font-size: 200%;\u000a}\u000a\u000adiv.passage {\u000a	font-family: retro-font;\u000a}\u000a\u000adiv.passage a,\u000adiv.passage a:hover,\u000adiv.passage a:visited {\u000a	color: #ef58d1;\u000a}
-p676
+V@font-face {\u000a	font-family: retro-font;\u000a	src: url('http://explode.cutely.co/twine/assimil/resources/C64_User_v1.0-STYLE.ttf');\u000a}\u000a\u000aimg#titleImage {\u000a	display: block;\u000a	margin-left: auto;\u000a	margin-right: auto;\u000a}\u000a\u000aa#Story,\u000aa#Story:hover {\u000a	display:block;\u000a	text-align: center;\u000a	font-size: 200%;\u000a}\u000a\u000adiv.passage {\u000a	font-family: retro-font;\u000a}\u000a\u000adiv.passage a,\u000adiv.passage a:hover,\u000adiv.passage a:visited {\u000a	color: #ef58d1;\u000a}\u000a\u000aimg.centredImage {\u000a	display: block;\u000a	margin-left: auto;\u000a	margin-right: auto;\u000a}\u000adiv.centredText {\u000a	text-align: center;\u000a}\u000adiv.bigText {\u000a	font-size: 200%;\u000a}
+p643
 sg20
-(lp677
-Vstylesheet
-p678
-asg22
-g23
+g21
 ((I2013
 I4
 I5
@@ -2246,36 +2131,36 @@ I46
 I4
 I95
 I1
-tp679
-(dp680
-tp681
-Rp682
-sg28
-g682
-sg29
+tp644
+(dp645
+tp646
+Rp647
+sg26
 VRIKA Styles
-p683
-sbsa(dp684
+p648
+sg28
+g647
+sg29
+(lp649
+Vstylesheet
+p650
+asbsa(dp651
 g12
 I00
 sg13
-(lp685
+(lp652
 F2110.0
 aF10.0
 asg15
 (itiddlywiki
 Tiddler
-p686
-(dp687
+p653
+(dp654
 g18
 VjQuery.fn.teletype = function(opts){\u000a    var $this = this,\u000a        defaults = {\u000a            animDelay: 50\u000a        },\u000a        settings = jQuery.extend(defaults, opts);\u000a    \u000a    jQuery.each(settings.text.split(''), function(i, letter){\u000a        setTimeout(function(){\u000a            $this.html($this.html() + letter);\u000a        }, settings.animDelay * i);\u000a    });\u000a};\u000a
-p688
+p655
 sg20
-(lp689
-Vscript
-p690
-asg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2285,36 +2170,36 @@ I31
 I5
 I96
 I1
-tp691
-(dp692
-tp693
-Rp694
-sg28
-g694
-sg29
+tp656
+(dp657
+tp658
+Rp659
+sg26
 VjQuery Plugin
-p695
-sbsa(dp696
+p660
+sg28
+g659
+sg29
+(lp661
+Vscript
+p662
+asbsa(dp663
 g12
 I00
 sg13
-(lp697
+(lp664
 F2250.0
 aF10.0
 asg15
 (itiddlywiki
 Tiddler
-p698
-(dp699
+p665
+(dp666
 g18
 V(function(){\u000aversion.extensions['timedreplaceMacro'] = {\u000a  major: 2,\u000a  minor: 1,\u000a  revision: 0\u000a};\u000amacros['timedinsert'] = macros['timedreplace'] = {\u000a  handler: function (g, e, f, b) {\u000a    function tagcontents(starttag, endtag, k) {\u000a      var a = b.source.slice(k);\u000a      var l = 0;\u000a      var c = "";\u000a      for (var i = 0; i < a.length; i++) {\u000a        var w = endtag.length;\u000a        if (a.substr(i, w) == endtag) {\u000a          if (l == 0) {\u000a            b.nextMatch = k + i + w;\u000a            return c;\u000a          } else {\u000a            l--;\u000a            c += a.charAt(i);\u000a          }\u000a        } else {\u000a          if (a.substr(i, starttag.length) == starttag) {\u000a            l++;\u000a          }\u000a          c += a.charAt(i);\u000a        }\u000a      }\u000a      return "";\u000a    }\u000a    var tr = "<<"+e;\u000a    var rw = "<<replacewith>>";\u000a	var etr = "<<end" + e + ">>";\u000a    var k = b.source.indexOf('>>', b.matchStart) + 2;\u000a	var c, d;\u000a	if (e=="timedreplace") {\u000a      c = tagcontents(tr, rw, k);\u000a      d = tagcontents((c ? rw : tr), etr, c ? b.nextMatch : k);\u000a	} else if (e=="timedinsert") {\u000a	  d = tagcontents(tr, etr, k);\u000a	} else if (e=="timedremove") {\u000a	  c = tagcontents(tr, etr, k);\u000a	}\u000a	var tm; tm = (parseInt(f[0]) || 0) * 500;\u000a    var h;\u000a    if (c) {\u000a      h = insertElement(g, "span", null, "timedreplacement timedreplacement1");\u000a      new Wikifier(h, c);\u000a	  if (d || e=="timedremove") {\u000a	    setTimeout(function () {\u000a          h.classList.add("replacement-out");\u000a          setTimeout(function () {\u000a            h.parentNode.removeChild(h);\u000a          }, 1000);\u000a		}, tm);\u000a	  }\u000a    }\u000a    if (d) {\u000a      var m = insertElement(g, "span", null, "timedreplacement timedreplacement2", d);\u000a      m.style.display = "none";\u000a      setTimeout(function () {\u000a        if (m) {\u000a          var t = m.firstChild ? m.firstChild.nodeValue : "";\u000a          removeChildren(m);\u000a          new Wikifier(m, t);\u000a          m.style.display = "inline";\u000a          m.classList.add("replacement-in");\u000a          setTimeout(function () {\u000a            m.classList.remove("replacement-in");\u000a          }, 1);\u000a		  scrollWindowTo(m);\u000a        }\u000a      }, tm);\u000a    } else if (!c && e!="timedremove") {\u000a      throwError(g, "can't find matching end"+e);\u000a      return;\u000a    }\u000a  }\u000a}\u000amacros['timedremove'] = macros['timedreplace'];\u000amacros['replacewith'] = macros['endtimedinsert'] = macros['endtimedremove'] = macros['endtimedreplace'] = {\u000a  handler: function () {}\u000a}\u000ascrollWindowTo = function(E) {\u000a    var D = window.scrollY ? window.scrollY : document.body.scrollTop;\u000a    var G = J(E);\u000a	if (!G) return;\u000a    var C = Math.abs(D - G);\u000a    var B = 0;\u000a    var I = (D > G) ? -1 : 1;\u000a    var F = window.setInterval(H, 25);\u000a    function H() {\u000a        B += 0.1;\u000a        window.scrollTo(0, D + I * (C * Math.easeInOut(B)));\u000a        if(B >= 1) {\u000a            window.clearInterval(F)\u000a        }\u000a    }\u000a    function J(N) {\u000a        var O = A(N);\u000a        var P = O + N.offsetHeight;\u000a        var K = window.scrollY ? window.scrollY : document.body.scrollTop;\u000a        var L = window.innerHeight ? window.innerHeight : document.body.clientHeight;\u000a        var M = K + L;\u000a        if(O >= K) {\u000a            if(P > M) {\u000a                if(N.offsetHeight < L) {\u000a                    return (O - (L - N.offsetHeight) + 20)\u000a                }\u000a                else {\u000a                    return O;\u000a                }\u000a            }\u000a        }\u000a    }\u000a    function A(K) {\u000a        var L = 0;\u000a        while(K.offsetParent) {\u000a            L += K.offsetTop;\u000a            K = K.offsetParent;\u000a        }\u000a        return L\u000a    }\u000a}\u000a}());
-p700
+p667
 sg20
-(lp701
-Vscript
-p702
-asg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2324,36 +2209,36 @@ I31
 I5
 I96
 I1
-tp703
-(dp704
-tp705
-Rp706
-sg28
-g706
-sg29
+tp668
+(dp669
+tp670
+Rp671
+sg26
 VTimed Insert
-p707
-sbsa(dp708
+p672
+sg28
+g671
+sg29
+(lp673
+Vscript
+p674
+asbsa(dp675
 g12
 I00
 sg13
-(lp709
+(lp676
 F2250.0
 aF290.0
 asg15
 (itiddlywiki
 Tiddler
-p710
-(dp711
+p677
+(dp678
 g18
-Vdiv#passageStageSelect div.content {\u000a	width: 425px;\u000a	margin-left: auto;\u000a	margin-right: auto;\u000a}\u000a\u000adiv.block {\u000a	padding: 0;\u000a	display: inline-block;\u000a	width: 135px;\u000a	height: 135px;\u000a}\u000a\u000adiv.stage {\u000a	background-color: black;\u000a	background-image: url("resources/frame2.png");\u000a	cursor: crosshair;\u000a}\u000a\u000adiv.complete {\u000a	cursor: default !important;\u000a}\u000a\u000adiv.notReady {\u000a	cursor: not-allowed !important;\u000a}\u000a\u000aimg.boss {\u000a	margin: 18px;\u000a	width: 98px;\u000a	height: 96px;\u000a}\u000a\u000a
-p712
+Vdiv#passageStageSelect div.content {\u000a	width: 425px;\u000a	margin-left: auto;\u000a	margin-right: auto;\u000a}\u000a\u000adiv.block {\u000a	padding: 0;\u000a	display: inline-block;\u000a	width: 135px;\u000a	height: 135px;\u000a}\u000a\u000adiv.stage {\u000a	background-color: black;\u000a	background-image: url("resources/frame2.png");\u000a	cursor: crosshair;\u000a}\u000a\u000adiv.complete {\u000a	cursor: default !important;\u000a}\u000a\u000adiv.notReady {\u000a	cursor: not-allowed !important;\u000a}\u000a\u000aimg.boss {\u000a	margin: 18px;\u000a	width: 98px;\u000a	height: 96px;\u000a}\u000a\u000adiv#stageName {\u000a	text-align: center;\u000a	font-size: 200%;\u000a	margin-top: 1em;\u000a}
+p679
 sg20
-(lp713
-Vstylesheet
-p714
-asg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2363,34 +2248,36 @@ I45
 I5
 I96
 I1
-tp715
-(dp716
-tp717
-Rp718
+tp680
+(dp681
+tp682
+Rp683
+sg26
+VStageSelect CSS
+p684
 sg28
-g718
+g683
 sg29
-VStage Select CSS
-p719
-sbsa(dp720
+(lp685
+Vstylesheet
+p686
+asbsa(dp687
 g12
 I00
 sg13
-(lp721
+(lp688
 F1130.0
 aF10.0
 asg15
 (itiddlywiki
 Tiddler
-p722
-(dp723
+p689
+(dp690
 g18
 V<<timedinsert 1>><<startAudioLoop "typing">><<teletype "Assimilagent 2/19 is sent here on a special mission from hivequeen." 75>>\u000a\u000a<<timedinsert 11>><<teletype "The threat of a new galaxy has emerged, cause hivequeen even in datapod to fear for her wisdom and eternity. Since you did not know hivequeen scared, you know that this mission is urgent." 50>>\u000a\u000a<<timedinsert 20>><<teletype "In order to stand a chance against this new threat, she needs more power. You are here in order to absorb the most powerful force that has been known and sapientkind. To provide unity in times of despair; to crush the rule of oppressors; to ward off a myriad of hopelessness, cruelty and, in the whole universe, the force is known." 50>>\u000a\u000a<<timedinsert 34>><<stopAudioLoop "typing">>[[Girls.|StageSelect]]\u000a\u000a<<endtimedinsert>><<endtimedinsert>><<endtimedinsert>><<endtimedinsert>>\u000a
-p724
+p691
 sg20
-(lp725
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2400,34 +2287,34 @@ I35
 I5
 I96
 I1
-tp726
-(dp727
-tp728
-Rp729
-sg28
-g729
-sg29
+tp692
+(dp693
+tp694
+Rp695
+sg26
 VStory
-p730
-sbsa(dp731
+p696
+sg28
+g695
+sg29
+(lp697
+sbsa(dp698
 g12
 I00
 sg13
-(lp732
+(lp699
 F850.0
 aF290.0
 asg15
 (itiddlywiki
 Tiddler
-p733
-(dp734
+p700
+(dp701
 g18
-V<<startAudioLoop "stageselect">>\u000a<<if $scientist neq true>><html><div class="block stage"><img id="scientist1" class="boss" src="resources/tempest.png" onclick="state.display(this.id, this);"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $librarian neq true>><html><div class="block stage"><img id="librarian1" class="boss" src="resources/kasumi.png" onclick="state.display(this.id, this);"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $scientist eq true AND $librarian eq true AND $witch eq true AND $crystal eq true>><html><div class="block stage"><img id="endless1" class="boss" src="resources/boss2.png" onclick="state.display(this.id, this);"></div></html><<else>><html><div class="block stage notReady"><img class="boss" src="resources/boss.png"></div></html><<endif>><html><div class="block"></div></html><<if $witch neq true>><html><div class="block stage"><img id="witch1" class="boss" src="resources/astra.png" onclick="state.display(this.id, this);"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $crystal neq true>><html><div class="block stage"><img id="crystal1" class="boss" src="resources/fumaya.png" onclick="state.display(this.id, this);"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>>\u000a
-p735
+V<<timedinsert 1>><<loopsound "http://explode.cutely.co/twine/assimil/resources/stageselect-looped.mp3">><<loopsound "http://explode.cutely.co/twine/assimil/resources/stageselect-looped.ogg">><<endtimedinsert>>\u000a<<if $scientist neq true>><html><div class="block stage"><img id="scientist1" class="boss" src="resources/tempest.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('scientist bruiser Tempest');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $librarian neq true>><html><div class="block stage"><img id="librarian1" class="boss" src="resources/kasumi.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('librarian ninja Kasumi');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $scientist eq true AND $librarian eq true AND $witch eq true AND $crystal eq true>><html><div class="block stage"><img id="endless1" class="boss" src="resources/boss2.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('The ENDLESS HORROR');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage notReady"><img class="boss" src="resources/boss.png"></div></html><<endif>><html><div class="block"></div></html><<if $witch neq true>><html><div class="block stage"><img id="witch1" class="boss" src="resources/astra.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('witch dominatrix Astra');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $crystal neq true>><html><div class="block stage"><img id="crystal1" class="boss" src="resources/fumaya.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('crystal warrior Fumaya');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>>\u000a<html><div id="stageName"></div></html>\u000a<html><div>&nbsp;</div></html>
+p702
 sg20
-(lp736
-sg22
-g23
+g21
 ((I2013
 I4
 I6
@@ -2437,16 +2324,729 @@ I57
 I5
 I96
 I1
-tp737
-(dp738
-tp739
-Rp740
-sg28
-g740
-sg29
+tp703
+(dp704
+tp705
+Rp706
+sg26
 VStageSelect
-p741
-sbsasS'scale'
+p707
+sg28
+g706
+sg29
+(lp708
+sbsa(dp709
+g12
+I00
+sg13
+(lp710
+F1410.0
+aF1410.0
+asg15
+(itiddlywiki
+Tiddler
+p711
+(dp712
+g18
+V<<centreText "YOU GOT" "bigText">>\u000a<<centreImage "http://explode.cutely.co/twine/assimil/resources/stagecomplete.gif">>\u000a<<fadeIn "$powerUp" "bigText">>\u000a<<playAudio "powerup">>
+p713
+sg29
+(lp714
+sg20
+g21
+((I2013
+I4
+I6
+I16
+I36
+I41
+I5
+I96
+I1
+tp715
+(dp716
+tp717
+Rp718
+sg28
+g718
+sg26
+VPowerUp
+p719
+sbsa(dp720
+g12
+I00
+sg13
+(lp721
+F570.0
+aF2950.0
+asg15
+(itiddlywiki
+Tiddler
+p722
+(dp723
+g18
+V<html>\u000a		<div class="creditsThinLineTop"></div>\u000a		<div class="creditsMidLineTop"></div>\u000a		<div class="creditsThickLineTop"></div>\u000a		<div class="creditsContent">\u000a			<div id="creditsSectionTitle"></div>\u000a		</div>\u000a		<div class="creditsThickLineBottom"></div>\u000a		<div class="creditsMidLineBottom"></div>\u000a		<div class="creditsThinLineBottom"></div>\u000a</html>
+p724
+sg29
+(lp725
+sg20
+g21
+((I2013
+I4
+I6
+I17
+I40
+I18
+I5
+I96
+I1
+tp726
+(dp727
+tp728
+Rp729
+sg28
+g729
+sg26
+VCreditsTemplate
+p730
+sbsa(dp731
+g12
+I00
+sg13
+(lp732
+F710.0
+aF2950.0
+asg15
+(itiddlywiki
+Tiddler
+p733
+(dp734
+g18
+V			div.creditsThickLineTop {\u000a				border-top: 10px solid #ef58d1;\u000a			}\u000a			div.creditsMidLineTop {\u000a				height: 3px;\u000a				border-top: 5px solid #ef58d1;\u000a			}\u000a			div.creditsThinLineTop {\u000a				height: 3px;\u000a				border-top: 3px solid #ef58d1;\u000a			}\u000a			div.creditsThickLineBottom {\u000a				border-bottom: 10px solid #ef58d1;\u000a			}\u000a			div.creditsMidLineBottom {\u000a				height: 3px;\u000a				border-bottom: 5px solid #ef58d1;\u000a			}\u000a			div.creditsThinLineBottom {\u000a				height: 3px;\u000a				border-bottom: 3px solid #ef58d1;\u000a			}\u000a			div.creditsContent {\u000a				height: 120px;\u000a			}\u000a			div#creditsSectionTitle {\u000a				margin-top: 32px;\u000a				font-size: 400%;\u000a			}\u000a			div#creditsCopyrightTitle {\u000a				display: block;\u000a				margin-top: 64px;\u000a				text-align: center;\u000a				font-size: 200%;\u000a			}\u000a			div#creditsThankYou {\u000a				text-align: right;\u000a			}\u000a
+p735
+sg29
+(lp736
+Vstylesheet
+p737
+asg20
+g21
+((I2013
+I4
+I6
+I18
+I2
+I20
+I5
+I96
+I1
+tp738
+(dp739
+tp740
+Rp741
+sg28
+g741
+sg26
+VCredits CSS
 p742
+sbsa(dp743
+g12
+I00
+sg13
+(lp744
+F570.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p745
+(dp746
+g18
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "Spanglypants" 75>>\u000a<<timedinsert 2>><<teletype "RIKA" 75>><<endtimedinsert>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "GAME CONCEPT" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditsProgram" 10>>\u000a<<timedinsert 1>><<playsound "http://explode.cutely.co/twine/assimil/resources/credits.mp3">><<playsound "http://explode.cutely.co/twine/assimil/resources/credits.ogg">><<endtimedinsert>>
+p747
+sg29
+(lp748
+sg20
+g21
+((I2013
+I4
+I6
+I18
+I6
+I22
+I5
+I96
+I1
+tp749
+(dp750
+tp751
+Rp752
+sg28
+g752
+sg26
+VCreditsConcept
+p753
+sbsa(dp754
+g12
+I00
+sg13
+(lp755
+F710.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p756
+(dp757
+g18
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "RIKA" 75>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "PROGRAMMING" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a<<timedinsert 1>><<creditImage "resources/tempest.png">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditsStory" 10>>
+p758
+sg29
+(lp759
+sg20
+g21
+((I2013
+I4
+I6
+I18
+I6
+I22
+I5
+I96
+I1
+tp760
+(dp761
+tp762
+Rp763
+sg28
+g763
+sg26
+VCreditsProgram
+p764
+sbsa(dp765
+g12
+I00
+sg13
+(lp766
+F850.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p767
+(dp768
+g18
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "Spanglypants" 75>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "STORY" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a<<timedinsert 1>><<creditImage "resources/tempest.png">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditArtElements" 10>>
+p769
+sg29
+(lp770
+sg20
+g21
+((I2013
+I4
+I6
+I18
+I26
+I41
+I5
+I96
+I1
+tp771
+(dp772
+tp773
+Rp774
+sg28
+g774
+sg26
+VCreditsStory
+p775
+sbsa(dp776
+g12
+I00
+sg13
+(lp777
+F990.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p778
+(dp779
+g18
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "Spanglypants" 75>>\u000a<<timedinsert 2>><<teletype "RIKA" 75>>\u000a<<timedinsert 2>><<teletype "SQUARE CO." 75>>\u000a<<timedinsert 2>><<teletype "CAPCOM" 75>>\u000a<<timedinsert 2>><<teletype "FoxRichards/DEVIANTART" 75>>\u000a<<endtimedinsert>><<endtimedinsert>><<endtimedinsert>><<endtimedinsert>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "ART ELEMENT" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a<<timedinsert 1>><<creditImage "resources/tempest.png">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditMusicElements" 15>>
+p780
+sg29
+(lp781
+sg20
+g21
+((I2013
+I4
+I6
+I18
+I27
+I36
+I5
+I96
+I1
+tp782
+(dp783
+tp784
+Rp785
+sg28
+g785
+sg26
+VCreditArtElements
+p786
+sbsa(dp787
+g12
+I00
+sg13
+(lp788
+F1130.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p789
+(dp790
+g18
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "CAPCOM (MEGA MAN)" 25>>\u000a<<timedinsert 2>><<teletype "HECTOR (MOON CRYSTAL)" 25>>\u000a<<timedinsert 2>><<teletype "NTDEC/ASDER (SAN GUO ZHI: QUN XIONG ZHENG BA)" 25>>\u000a<<timedinsert 2>><<teletype "SEGA (ALTERED BEAST)" 25>>\u000a<<timedinsert 2>><<teletype "SQUARE CO. (CHRONO TRIGGER)" 25>>\u000a<<endtimedinsert>><<endtimedinsert>><<endtimedinsert>><<endtimedinsert>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "AUDIO" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a<<timedinsert 1>><<creditImage "resources/tempest.png">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditInspiration" 15>>
+p791
+sg29
+(lp792
+sg20
+g21
+((I2013
+I4
+I6
+I18
+I27
+I36
+I5
+I96
+I1
+tp793
+(dp794
+tp795
+Rp796
+sg28
+g796
+sg26
+VCreditMusicElements
+p797
+sbsa(dp798
+g12
+I00
+sg13
+(lp799
+F1270.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p800
+(dp801
+g18
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "MEGA MAN series" 50>>\u000a<<timedinsert 2>><<teletype "dating sims" 50>>\u000a<<timedinsert 2>><<teletype "vintage bootleg games" 50>>\u000a<<timedinsert 3>><<teletype "the BORG" 50>>\u000a<<endtimedinsert>><<endtimedinsert>><<endtimedinsert>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "INSPIRATION" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a<<timedinsert 1>><<creditImage "resources/tempest.png">><<endtimedinsert>>\u000a\u000a<<timedgoto "Copyright" 15>>
+p802
+sg29
+(lp803
+sg20
+g21
+((I2013
+I4
+I6
+I18
+I49
+I14
+I5
+I96
+I1
+tp804
+(dp805
+tp806
+Rp807
+sg28
+g807
+sg26
+VCreditInspiration
+p808
+sbsa(dp809
+g12
+I00
+sg13
+(lp810
+F1410.0
+aF1970.0
+asg15
+(itiddlywiki
+Tiddler
+p811
+(dp812
+g18
+VThe ENDLESS HORROR has overpowered you.<<playAudio "laugh">>\u000a\u000a<<timedinsert 4>>But then a voice come, "No, we will lend us power to you."\u000a\u000aYou feel stronger.\u000a\u000aYou know you can win [[next time|StageSelect]]!\u000a<<set $playerHealth = Math.floor($playerHealth * 1.2) >>\u000a<<endtimedinsert>>\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>><<endBattle>>
+p813
+sg29
+(lp814
+sg20
+g21
+((I2013
+I4
+I7
+I12
+I11
+I41
+I6
+I97
+I1
+tp815
+(dp816
+tp817
+Rp818
+sg28
+g818
+sg26
+Vdefeat
+p819
+sbsa(dp820
+g12
+I00
+sg13
+(lp821
+F710.0
+aF1830.0
+asg15
+(itiddlywiki
+Tiddler
+p822
+(dp823
+g18
+Vversion.extensions['battleSystem'] = {\u000a	major: 1,\u000a	minor: 0,\u000a	revision: 0\u000a};\u000amacros['startBattle'] = {\u000a	handler: function (g, e, f, b) {\u000a		BattleLog.start();\u000a\u000a		TheHero.currentHp = state.history[0].variables["playerHealth"];\u000a		\u000a		TheBoss.prepareAttack();\u000a		TheHero.updateHint();\u000a		jQuery("#heroAttack").prop("disabled", true);\u000a		\u000a		TheBoss.showHealth(jQuery("#horrorHealth"));\u000a		TheHero.showHealth(jQuery("#heroHealth"));\u000a	}\u000a}\u000amacros['endBattle'] = {\u000a	handler: function (g, e, f, b) {\u000a		BattleLog.stop();\u000a	}\u000a}
+p824
+sg29
+(lp825
+Vscript
+p826
+asg20
+g21
+((I2013
+I4
+I7
+I12
+I50
+I34
+I6
+I97
+I1
+tp827
+(dp828
+tp829
+Rp830
+sg28
+g830
+sg26
+VBattle System
+p831
+sbsa(dp832
+g12
+I00
+sg13
+(lp833
+F570.0
+aF1830.0
+asg15
+(itiddlywiki
+Tiddler
+p834
+(dp835
+g18
+Vdiv#playerControl label {\u000a	cursor: pointer;\u000a}\u000aspan.blInfo {\u000a	color: white;\u000a}\u000aspan.blHorror {\u000a	color: #796a4f;\u000a}\u000aspan.blHero {\u000a	color: #ef58d1;\u000a}
+p836
+sg29
+(lp837
+Vstylesheet
+p838
+asg20
+g21
+((I2013
+I4
+I7
+I12
+I51
+I16
+I6
+I97
+I1
+tp839
+(dp840
+tp841
+Rp842
+sg28
+g842
+sg26
+VBattle CSS
+p843
+sbsa(dp844
+g12
+I00
+sg13
+(lp845
+F850.0
+aF1830.0
+asg15
+(itiddlywiki
+Tiddler
+p846
+(dp847
+g18
+V<html>\u000a		<div>ENDLESS HORROR: <span id="horrorHealth"></span></div>\u000a		<div>YOU: <span id="heroHealth"></span></div>\u000a		\u000a		<div id="playerControl">\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="3"/>TENTACLE WHIP</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="2"/>BRUISER FIST</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="1"/>NINJA KUNAI</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="0"/>WITCH BEAM</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="4"/>CRYSTAL DEFENDER</label><br/>\u000a			<div id="playerControlHint"></div>\u000a			\u000a			<button id="heroAttack" onclick="attack();">Attack!</button>\u000a		</div>\u000a		\u000a		<div id="battleLog"></div>\u000a		<div id="battleFinish"></div>\u000a</html>\u000a<<startBattle>>\u000a<<timedinsert 1>><<loopsound "http://explode.cutely.co/twine/assimil/resources/boss.mp3">><<loopsound "http://explode.cutely.co/twine/assimil/resources/boss.ogg">><<endtimedinsert>>
+p848
+sg29
+(lp849
+sg20
+g21
+((I2013
+I4
+I7
+I12
+I51
+I29
+I6
+I97
+I1
+tp850
+(dp851
+tp852
+Rp853
+sg28
+g853
+sg26
+VBattle
+p854
+sbsa(dp855
+g12
+I00
+sg13
+(lp856
+F1410.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p857
+(dp858
+g18
+V<html>\u000a		<div class="creditsThinLineTop"></div>\u000a		<div class="creditsMidLineTop"></div>\u000a		<div class="creditsThickLineTop"></div>\u000a		<div class="creditsContent">\u000a			<div id="creditsCopyrightTitle"></div>\u000a		</div>\u000a		<div class="creditsThickLineBottom"></div>\u000a		<div class="creditsMidLineBottom"></div>\u000a		<div class="creditsThinLineBottom"></div>\u000a</html>\u000a<<timedinsert 1>><<teletype "PROGRAM COPYRIGHTS 1990 FAKESOFT" 100 "creditsCopyrightTitle">><<endtimedinsert>>\u000a\u000a<<if $ending eq "destruction">><<timedgoto "Final" 15>><<else>><<timedgoto "FinalSecret" 15>><<endif>>
+p859
+sg29
+(lp860
+sg20
+g21
+((I2013
+I4
+I7
+I13
+I38
+I12
+I6
+I97
+I1
+tp861
+(dp862
+tp863
+Rp864
+sg28
+g864
+sg26
+VCopyright
+p865
+sbsa(dp866
+g12
+I00
+sg13
+(lp867
+F1550.0
+aF2810.0
+asg15
+(itiddlywiki
+Tiddler
+p868
+(dp869
+g18
+V<<timedinsert 1>><<teletype "YOU ACHIEVED GREAT!!">><<endtimedinsert>>\u000a\u000a<<centreImage "http://explode.cutely.co/twine/assimil/resources/endlesshorror2.png">>\u000a<html><div id="creditsThankYou"></div></html>\u000a\u000a<<timedinsert 1>><<teletype "THANK YOU!! PLAY AGAIN" 100 "creditsThankYou">><<endtimedinsert>>
+p870
+sg29
+(lp871
+sg20
+g21
+((I2013
+I4
+I7
+I13
+I42
+I53
+I6
+I97
+I1
+tp872
+(dp873
+tp874
+Rp875
+sg28
+g875
+sg26
+VFinal
+p876
+sbsa(dp877
+g12
+I00
+sg13
+(lp878
+F1550.0
+aF2950.0
+asg15
+(itiddlywiki
+Tiddler
+p879
+(dp880
+g18
+V<<timedinsert 1>><<teletype "YOU ACHIEVED GREAT!!">><<endtimedinsert>>\u000a\u000a<<centreImage "http://explode.cutely.co/twine/assimil/resources/girlmorph2.png">>\u000a<html><div id="creditsThankYou"></div></html>\u000a\u000a<<timedinsert 1>><<teletype "THANK YOU!! PLAY AGAIN" 100 "creditsThankYou">><<endtimedinsert>>
+p881
+sg29
+(lp882
+sg20
+g21
+((I2013
+I4
+I7
+I13
+I42
+I53
+I6
+I97
+I1
+tp883
+(dp884
+tp885
+Rp886
+sg28
+g886
+sg26
+VFinalSecret
+p887
+sbsa(dp888
+g12
+I00
+sg13
+(lp889
+F10.0
+aF10.0
+asg15
+(itiddlywiki
+Tiddler
+p890
+(dp891
+g18
+VAssimilagent
+p892
+sg29
+(lp893
+sg20
+g21
+((I2013
+I3
+I16
+I21
+I49
+I9
+I5
+I75
+I1
+tp894
+(dp895
+tp896
+Rp897
+sg28
+g897
+sg26
+VStoryTitle
+p898
+sbsa(dp899
+g12
+I00
+sg13
+(lp900
+F150.0
+aF10.0
+asg15
+(itiddlywiki
+Tiddler
+p901
+(dp902
+g18
+VFAKESOFT
+p903
+sg29
+(lp904
+sg20
+g21
+((I2013
+I2
+I14
+I11
+I0
+I32
+I3
+I45
+I0
+tp905
+(dp906
+tp907
+Rp908
+sg28
+g908
+sg26
+VStoryAuthor
+p909
+sbsa(dp910
+g12
+I00
+sg13
+(lp911
+F2250.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p912
+(dp913
+g18
+VSoundtracks = {};\u000a(function(){\u000a	var div = $("storeArea").firstChild;\u000a	var fe = ["ogg","mp3","wav","webm"];\u000a	while(div) {\u000a		var b=String.fromCharCode(92);\u000a		var q = '"';\u000a		var re = "['"+q+"]([^"+q+"']*?)"+b+".(ogg|mp3|wav|webm)['"+q+"]";\u000a		k(new RegExp(re,"gi"));\u000a        div = div.nextSibling;\u000a	}\u000a	function k(c,e) {\u000a		do {\u000a			d = c.exec(div.innerHTML);\u000a			if(d) {\u000a				var a = new Audio();\u000a				if (a.canPlayType) {\u000a					for(var i=-1;i<fe.length;i+=1) {\u000a						if (i>=0) d[2] = fe[i];\u000a						if (a.canPlayType("audio/"+d[2])) \u000a						  break;\u000a					}\u000a					if (i<fe.length) {\u000a						a.setAttribute("src",d[1]+"."+d[2]);\u000a						Soundtracks[d[1]]=a;\u000a					} else console.log("Browser can't play '"+d[1]+"'");\u000a				}\u000a			}\u000a		} while(d);\u000a	}\u000a}());\u000aversion.extensions['soundMacros'] = {major:1, minor:0, revision:0};\u000amacros['unloopsound']=macros['loopsound']=macros['pausesound']=macros['stopsound']=macros['playsound'] = {\u000a  handler: function (a,b,c,d) {\u000a    var s = eval(d.fullArgs());\u000a    if (s) {\u000a		s=s.toString();\u000a		var m = Soundtracks[s.slice(0,s.lastIndexOf("."))];\u000a		if (m) {\u000a		  if(b=="playsound") { m.currentTime=0; m.play(); }\u000a		  else if (b=="loopsound") { \u000a			if(m.loop==undefined) {\u000a				m.loopfn = function(){this.currentTime = 0;this.play();};\u000a				m.addEventListener('ended',m.loopfn,0);\u000a				console.log("loop property absent");\u000a			} else m.loop=true;\u000a			m.currentTime=0; m.play(); \u000a		  }\u000a		  else if (b=="pausesound") { m.pause(); }\u000a		  else if (b=="unloopsound") { \u000a			if (m.loop!=undefined){\u000a				m.loop=false;\u000a			} else if (m.loopfn) {\u000a				m.removeEventListener('ended',m.loopfn);\u000a				delete m.loopfn;\u000a			}\u000a		  }\u000a		  else if (b=="stopsound") { m.pause(); m.currentTime=0; }\u000a		}\u000a	}\u000a  }\u000a}\u000amacros['stopallsound']={\u000a	handler: function () {\u000a		for(var j in Soundtracks) {\u000a			try {\u000a				var i=Soundtracks[j];\u000a				i.pause();\u000a				i.currentTime = 0; \u000a			} catch (e) {\u000a			}\u000a		}\u000a	}\u000a}
+p914
+sg29
+(lp915
+Vscript
+p916
+asg20
+g21
+((I2013
+I2
+I14
+I7
+I59
+I40
+I3
+I45
+I0
+tp917
+(dp918
+tp919
+Rp920
+sg28
+g920
+sg26
+Vmusic
+p921
+sbsasS'scale'
+p922
 F0.6000000000000001
 ss.
