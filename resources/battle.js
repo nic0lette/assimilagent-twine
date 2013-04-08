@@ -54,7 +54,6 @@
 						
 						TheBoss.showHealth(jQuery("#horrorHealth"));
 						TheHero.showHealth(jQuery("#heroHealth"));
-						TheHero.updateHint();
 					}, 100);
 				},
 				stop: function() {

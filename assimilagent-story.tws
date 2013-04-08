@@ -20,7 +20,7 @@ p9
 (dp11
 S'selected'
 p12
-I01
+I00
 sS'pos'
 p13
 (lp14
@@ -77,7 +77,7 @@ Tiddler
 p33
 (dp34
 g18
-VYou will be taken to the hideout of scientists.\u000a\u000aYou are surrounded by countless beaker, flicker equipment, and tools. Does not seem to house anyone.\u000a\u000a<<cyclinglink "Call out" "Nothing.">>\u000a\u000a[[Move around|scientist2]]\u000a\u000a<<stopAudioLoop "stageselect">>
+VYou will be taken to the hideout of scientists.\u000a\u000aYou are surrounded by countless beaker, flicker equipment, and tools. Does not seem to house anyone.\u000a\u000a<<cyclinglink "Call out" "Nothing.">>\u000a\u000a[[Move around|scientist2]]\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p35
 sg20
 g21
@@ -114,7 +114,7 @@ Tiddler
 p44
 (dp45
 g18
-VYou will be taken to the hideout of librarians.\u000a\u000aIt is very quiet. No one to be seen. You are stuck around a lot of [[books|librarian2]] in all directions.\u000a\u000a<<stopAudioLoop "stageselect">>
+VYou will be taken to the hideout of librarians.\u000a\u000aIt is very quiet. No one to be seen. You are stuck around a lot of [[books|librarian2]] in all directions.\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p46
 sg20
 g21
@@ -151,7 +151,7 @@ Tiddler
 p55
 (dp56
 g18
-VYou will be taken to the hideout of witches.\u000a\u000aIt is made entirely of candy! Is this really the world... You really begin to feel as if you were in a fairy tale.\u000a\u000a[[A bad fairy tale, where witches eat children.|witch2]]\u000a\u000a<<stopAudioLoop "stageselect">>
+VYou will be taken to the hideout of witches.\u000a\u000aIt is made entirely of candy! Is this really the world... You really begin to feel as if you were in a fairy tale.\u000a\u000a[[A bad fairy tale, where witches eat children.|witch2]]\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p57
 sg20
 g21
@@ -188,7 +188,7 @@ Tiddler
 p66
 (dp67
 g18
-V<<if $scientist eq true AND $librarian eq true AND $witch eq true>>Crystal Cave of the Warrior... It is a beautiful place.\u000a\u000aYou have a bright and shining from every angle all the world around you. You feel a sense of immeasurable power of location.\u000a\u000aIndeed, the power of the warrior of crystal will help you to defeat the evil anonymous.\u000a\u000a[[Call to the Crystal Warrior|crystal2]]<<else>>You will be taken to the hideout of Crystal Warrior.\u000a\u000aThe world around you will begin to tremble violently. Crystal Warrior's power of the universe to protect this place.\u000a\u000a[[You can not enter yet.|StageSelect]]<<endif>>\u000a\u000a<<stopAudioLoop "stageselect">>
+V<<if $scientist eq true AND $librarian eq true AND $witch eq true>>Crystal Cave of the Warrior... It is a beautiful place.\u000a\u000aYou have a bright and shining from every angle all the world around you. You feel a sense of immeasurable power of location.\u000a\u000aIndeed, the power of the warrior of crystal will help you to defeat the evil anonymous.\u000a\u000a[[Call to the Crystal Warrior|crystal2]]<<else>>You will be taken to the hideout of Crystal Warrior.\u000a\u000aThe world around you will begin to tremble violently. Crystal Warrior's power of the universe to protect this place.\u000a\u000a[[You can not enter yet.|StageSelect]]<<endif>>\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p68
 sg20
 g21
@@ -632,7 +632,7 @@ Tiddler
 p198
 (dp199
 g18
-V"Please be quiet in the library OH MY GOD!!"\u000a\u000aFor some reason, you were kicked out...\u000a\u000a<<timedgoto "Start" 5 >>
+V"Please be quiet in the library OH MY GOD!!"\u000a\u000aFor some reason, you were kicked out...\u000a\u000a<<timedgoto "StageSelect" 5 >>
 p200
 sg20
 g21
@@ -1742,7 +1742,7 @@ Tiddler
 p528
 (dp529
 g18
-V<<centreImage "http://explode.cutely.co/twine/assimil/resources/endlessscroll.gif">>\u000aFinally, with all the powers of girls, you're ready to confront it.\u000a\u000a[[The Endless Horror...|Battle]]\u000a<<stopAudioLoop "stageselect">>
+V<<centreImage "http://explode.cutely.co/twine/assimil/resources/endlessscroll.gif">>\u000aFinally, with all the powers of girls, you're ready to confront it.\u000a\u000a[[The Endless Horror...|Battle]]\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>>
 p530
 sg20
 g21
@@ -1779,7 +1779,7 @@ Tiddler
 p539
 (dp540
 g18
-VMonster is weak now!\u000a\u000aWhat will you do?\u000a\u000a[[Destruction|destruction]]\u000a[[Assimilate|assimilation]]\u000a\u000a<<stopAudioLoop "boss">><<endBattle>>
+VMonster is weak now!\u000a\u000aWhat will you do?\u000a\u000a[[Destruction|destruction]]\u000a[[Assimilate|assimilation]]\u000a\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>><<endBattle>>
 p541
 sg20
 g21
@@ -2311,7 +2311,7 @@ Tiddler
 p700
 (dp701
 g18
-V<<startAudioLoop "stageselect">>\u000a<<if $scientist neq true>><html><div class="block stage"><img id="scientist1" class="boss" src="resources/tempest.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('scientist bruiser Tempest');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $librarian neq true>><html><div class="block stage"><img id="librarian1" class="boss" src="resources/kasumi.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('librarian ninja Kasumi');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $scientist eq true AND $librarian eq true AND $witch eq true AND $crystal eq true>><html><div class="block stage"><img id="endless1" class="boss" src="resources/boss2.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('The ENDLESS HORROR');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage notReady"><img class="boss" src="resources/boss.png"></div></html><<endif>><html><div class="block"></div></html><<if $witch neq true>><html><div class="block stage"><img id="witch1" class="boss" src="resources/astra.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('witch dominatrix Astra');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $crystal neq true>><html><div class="block stage"><img id="crystal1" class="boss" src="resources/fumaya.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('crystal warrior Fumaya');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>>\u000a<html><div id="stageName"></div></html>\u000a<html><div>&nbsp;</div></html>
+V<<timedinsert 1>><<loopsound "http://explode.cutely.co/twine/assimil/resources/stageselect-looped.mp3">><<loopsound "http://explode.cutely.co/twine/assimil/resources/stageselect-looped.ogg">><<endtimedinsert>>\u000a<<if $scientist neq true>><html><div class="block stage"><img id="scientist1" class="boss" src="resources/tempest.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('scientist bruiser Tempest');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $librarian neq true>><html><div class="block stage"><img id="librarian1" class="boss" src="resources/kasumi.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('librarian ninja Kasumi');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $scientist eq true AND $librarian eq true AND $witch eq true AND $crystal eq true>><html><div class="block stage"><img id="endless1" class="boss" src="resources/boss2.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('The ENDLESS HORROR');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage notReady"><img class="boss" src="resources/boss.png"></div></html><<endif>><html><div class="block"></div></html><<if $witch neq true>><html><div class="block stage"><img id="witch1" class="boss" src="resources/astra.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('witch dominatrix Astra');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>><html><div class="block"></div></html><<if $crystal neq true>><html><div class="block stage"><img id="crystal1" class="boss" src="resources/fumaya.png" onclick="state.display(this.id, this);" onmouseover="jQuery('#stageName').text('crystal warrior Fumaya');" onmouseout="jQuery('#stageName').text('');"></div></html><<else>><html><div class="block stage complete"><img class="boss" src="resources/blank.png"></div></html><<endif>>\u000a<html><div id="stageName"></div></html>\u000a<html><div>&nbsp;</div></html>
 p702
 sg20
 g21
@@ -2461,7 +2461,7 @@ Tiddler
 p745
 (dp746
 g18
-V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "Spanglypants" 75>>\u000a<<timedinsert 2>><<teletype "RIKA" 75>><<endtimedinsert>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "GAME CONCEPT" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditsProgram" 10>>\u000a<<playAudio "credits">>
+V<<display CreditsTemplate>>\u000a<<timedinsert 2>><<teletype "Spanglypants" 75>>\u000a<<timedinsert 2>><<teletype "RIKA" 75>><<endtimedinsert>><<endtimedinsert>>\u000a<<timedinsert 1>><<teletype "GAME CONCEPT" 100 "creditsSectionTitle">><<endtimedinsert>>\u000a\u000a<<timedgoto "CreditsProgram" 10>>\u000a<<timedinsert 1>><<loopsound "http://explode.cutely.co/twine/assimil/resources/credits.mp3">><<loopsound "http://explode.cutely.co/twine/assimil/resources/credits.ogg">><<endtimedinsert>>
 p747
 sg29
 (lp748
@@ -2683,7 +2683,7 @@ Tiddler
 p811
 (dp812
 g18
-VThe ENDLESS HORROR has overpowered you.<<playAudio "laugh">>\u000a\u000a<<timedinsert 4>>But then a voice come, "No, we will lend us power to you."\u000a\u000aYou feel stronger.\u000a\u000aYou know you can win [[next time|StageSelect]]!\u000a<<set $playerHealth = Math.floor($playerHealth * 1.2) >>\u000a<<endtimedinsert>>\u000a<<stopAudioLoop "boss">><<endBattle>>
+VThe ENDLESS HORROR has overpowered you.<<playAudio "laugh">>\u000a\u000a<<timedinsert 4>>But then a voice come, "No, we will lend us power to you."\u000a\u000aYou feel stronger.\u000a\u000aYou know you can win [[next time|StageSelect]]!\u000a<<set $playerHealth = Math.floor($playerHealth * 1.2) >>\u000a<<endtimedinsert>>\u000a<<timedinsert 1>><<stopallsound>><<endtimedinsert>><<endBattle>>
 p813
 sg29
 (lp814
@@ -2798,7 +2798,7 @@ Tiddler
 p846
 (dp847
 g18
-V<html>\u000a		<div>ENDLESS HORROR: <span id="horrorHealth"></span></div>\u000a		<div>YOU: <span id="heroHealth"></span></div>\u000a		\u000a		<div id="playerControl">\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="3"/>TENTACLE WHIP</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="2"/>BRUISER FIST</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="1"/>NINJA KUNAI</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="0"/>WITCH BEAM</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="4"/>CRYSTAL DEFENDER</label><br/>\u000a			<div id="playerControlHint"></div>\u000a			\u000a			<button id="heroAttack" onclick="attack();">Attack!</button>\u000a		</div>\u000a		\u000a		<div id="battleLog"></div>\u000a		<div id="battleFinish"></div>\u000a</html>\u000a<<startBattle>>\u000a<<startAudioLoop "boss">>
+V<<timedinsert 1>><html>\u000a		<div>ENDLESS HORROR: <span id="horrorHealth"></span></div>\u000a		<div>YOU: <span id="heroHealth"></span></div>\u000a		\u000a		<div id="playerControl">\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="3"/>TENTACLE WHIP</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="2"/>BRUISER FIST</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="1"/>NINJA KUNAI</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="0"/>WITCH BEAM</label><br/>\u000a			<label onmouseover="TheHero.showHint(this);" onmouseout="TheHero.updateHint();" onclick="TheHero.setAttack();"><input type="radio" name="attacks" value="4"/>CRYSTAL DEFENDER</label><br/>\u000a			<div id="playerControlHint"></div>\u000a			\u000a			<button id="heroAttack" onclick="attack();">Attack!</button>\u000a		</div>\u000a		\u000a		<div id="battleLog"></div>\u000a		<div id="battleFinish"></div>\u000a</html>\u000a<<startBattle>>\u000a<<loopsound "http://explode.cutely.co/twine/assimil/resources/boss.mp3">><<loopsound "http://explode.cutely.co/twine/assimil/resources/boss.ogg">><<endtimedinsert>>
 p848
 sg29
 (lp849
@@ -3007,7 +3007,46 @@ g908
 sg26
 VStoryAuthor
 p909
+sbsa(dp910
+g12
+I00
+sg13
+(lp911
+F2250.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p912
+(dp913
+g18
+VSoundtracks = {};\u000a(function(){\u000a	var div = $("storeArea").firstChild;\u000a	var fe = ["ogg","mp3","wav","webm"];\u000a	while(div) {\u000a		var b=String.fromCharCode(92);\u000a		var q = '"';\u000a		var re = "['"+q+"]([^"+q+"']*?)"+b+".(ogg|mp3|wav|webm)['"+q+"]";\u000a		k(new RegExp(re,"gi"));\u000a        div = div.nextSibling;\u000a	}\u000a	function k(c,e) {\u000a		do {\u000a			d = c.exec(div.innerHTML);\u000a			if(d) {\u000a				var a = new Audio();\u000a				if (a.canPlayType) {\u000a					for(var i=-1;i<fe.length;i+=1) {\u000a						if (i>=0) d[2] = fe[i];\u000a						if (a.canPlayType("audio/"+d[2])) \u000a						  break;\u000a					}\u000a					if (i<fe.length) {\u000a						a.setAttribute("src",d[1]+"."+d[2]);\u000a						Soundtracks[d[1]]=a;\u000a					} else console.log("Browser can't play '"+d[1]+"'");\u000a				}\u000a			}\u000a		} while(d);\u000a	}\u000a}());\u000aversion.extensions['soundMacros'] = {major:1, minor:0, revision:0};\u000amacros['unloopsound']=macros['loopsound']=macros['pausesound']=macros['stopsound']=macros['playsound'] = {\u000a  handler: function (a,b,c,d) {\u000a    var s = eval(d.fullArgs());\u000a    if (s) {\u000a		s=s.toString();\u000a		var m = Soundtracks[s.slice(0,s.lastIndexOf("."))];\u000a		if (m) {\u000a		  if(b=="playsound") { m.currentTime=0; m.play(); }\u000a		  else if (b=="loopsound") { \u000a			if(m.loop==undefined) {\u000a				m.loopfn = function(){this.currentTime = 0;this.play();};\u000a				m.addEventListener('ended',m.loopfn,0);\u000a				console.log("loop property absent");\u000a			} else m.loop=true;\u000a			m.currentTime=0; m.play(); \u000a		  }\u000a		  else if (b=="pausesound") { m.pause(); }\u000a		  else if (b=="unloopsound") { \u000a			if (m.loop!=undefined){\u000a				m.loop=false;\u000a			} else if (m.loopfn) {\u000a				m.removeEventListener('ended',m.loopfn);\u000a				delete m.loopfn;\u000a			}\u000a		  }\u000a		  else if (b=="stopsound") { m.pause(); m.currentTime=0; }\u000a		}\u000a	}\u000a  }\u000a}\u000amacros['stopallsound']={\u000a	handler: function () {\u000a		for(var j in Soundtracks) {\u000a			try {\u000a				var i=Soundtracks[j];\u000a				i.pause();\u000a				i.currentTime = 0;\u000a			} catch (e) {\u000a			}\u000a		}\u000a	}\u000a}
+p914
+sg29
+(lp915
+Vscript
+p916
+asg20
+g21
+((I2013
+I2
+I14
+I7
+I59
+I40
+I3
+I45
+I0
+tp917
+(dp918
+tp919
+Rp920
+sg28
+g920
+sg26
+Vmusic
+p921
 sbsasS'scale'
-p910
+p922
 F0.6000000000000001
 ss.
